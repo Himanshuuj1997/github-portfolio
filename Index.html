@@ -1,74 +1,113 @@
+<!-- portfolio/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Himanshu Joshi | DevOps & Data Specialist</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Himanshu Joshi - DevOps & Data Analytics Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="hero">
+  <!-- Hero Section -->
+  <section class="hero">
     <div class="overlay"></div>
     <div class="hero-content">
-      <img src="profile.jpg" alt="Himanshu Joshi" class="profile-img">
+      <img class="avatar" src="https://source.unsplash.com/200x200/?portrait,man" alt="Himanshu Joshi">
       <h1>Himanshu Joshi</h1>
-      <p>DevOps Engineer | Data Scientist | AWS Certified</p>
-      <div class="links">
+      <p>DevOps Engineer | Business Analyst | Data Enthusiast</p>
+      <div class="social-links">
         <a href="https://www.linkedin.com/in/himanshuuj">LinkedIn</a>
         <a href="https://github.com/himanshuuj1997">GitHub</a>
         <a href="mailto:hjoshi25@asu.edu">Email</a>
       </div>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <section class="section about">
-      <h2>About Me</h2>
-      <p>I'm a seasoned DevOps engineer with over 4 years of experience, a passion for data analytics, and a strong foundation in cloud architecture. From transforming monolithic systems to microservices, to automating infrastructure with Terraform, my mission is to drive efficiency and innovation.</p>
-    </section>
+  <!-- Summary -->
+  <section class="container summary">
+    <h2>Professional Summary</h2>
+    <p>Seasoned DevOps professional with 4+ years of experience in streamlining IT operations and applying data-driven strategies for business transformation. Proven success in automating workflows, reducing processing times, and improving system efficiency.</p>
+  </section>
 
-    <section class="section education">
-      <h2>Education</h2>
-      <ul>
-        <li>
-          <strong>Arizona State University</strong><br/>
-          MS, Information Systems Management (2023–2024)
-        </li>
-        <li>
-          <strong>University of Pune</strong><br/>
-          BE, Computer Science (2015–2019)
-        </li>
-      </ul>
-    </section>
+  <!-- Experience -->
+  <section class="container experience">
+    <h2>Experience</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Business Application Analyst 3</h3>
+        <span>Kingman Healthcare, AZ | Nov 2024–Present</span>
+      </div>
+      <div class="card">
+        <h3>Data Science Volunteer</h3>
+        <span>ASU | Jun 2024–Nov 2024</span>
+      </div>
+      <div class="card">
+        <h3>DevOps Engineer</h3>
+        <span>Avizva Solutions | May 2022–May 2023</span>
+      </div>
+      <div class="card">
+        <h3>Cloud Operation Engineer</h3>
+        <span>BlazeClan Technologies | Jun 2019–May 2022</span>
+      </div>
+    </div>
+  </section>
 
-    <section class="section awards">
-      <h2>Awards & Recognitions</h2>
-      <ul>
-        <li>5× “You Made a Difference” Awards – BlazeClan</li>
-        <li>Graduate ISM International Aid – ASU</li>
-        <li>PMO Scholarship Scheme – Undergraduate</li>
-        <li>RSTMS Grant for Research</li>
-      </ul>
-    </section>
+  <!-- Education -->
+  <section class="container education">
+    <h2>Education</h2>
+    <div class="edu-grid">
+      <div class="edu-item">
+        <img src="https://source.unsplash.com/100x100/?university,cap" alt="ASU">
+        <h3>Arizona State University</h3>
+        <p>MS, Information Systems Management<br>Aug 2023 – Jul 2024</p>
+      </div>
+      <div class="edu-item">
+        <img src="https://source.unsplash.com/100x100/?engineering,gear" alt="Pune University">
+        <h3>University of Pune</h3>
+        <p>BE, Computer Science<br>Aug 2015 – Jul 2019</p>
+      </div>
+    </div>
+  </section>
 
-    <section class="section projects">
-      <h2>Projects & Research</h2>
-      <ul>
-        <li>Global Happiness Visualization (Tableau)</li>
-        <li>EMI Defaulter Prediction saving $800k</li>
-        <li>Anime Recommendation via Reddit NLP</li>
-        <li>96.3% accuracy in Fauna Disease Detection (IJRASET)</li>
-      </ul>
-    </section>
+  <!-- Awards & Recognitions -->
+  <section class="container awards">
+    <h2>Awards & Recognitions</h2>
+    <div class="award-list">
+      <div class="award-item">
+        <img src="https://source.unsplash.com/80x80/?award,trophy" alt="You Made Difference Award">
+        <p>5× ‘You Made Difference’ Award at BlazeClan</p>
+      </div>
+      <div class="award-item">
+        <img src="https://source.unsplash.com/80x80/?scholarship" alt="PMO Scholarship">
+        <p>PMO Scholarship Scheme (Undergrad)</p>
+      </div>
+      <div class="award-item">
+        <img src="https://source.unsplash.com/80x80/?medal" alt="Graduate ISM International Aid">
+        <p>Graduate ISM International Aid</p>
+      </div>
+    </div>
+  </section>
 
-    <section class="section certs">
-      <h2>Certifications</h2>
-      <p>AWS Solutions Architect, Terraform Associate, Google Analytics, Kubernetes Admin, OCI AI, Scrum, Business Intelligence</p>
-    </section>
-  </main>
+  <!-- Projects -->
+  <section class="container projects">
+    <h2>Projects</h2>
+    <ul>
+      <li>Global Happiness Visualization (Tableau)</li>
+      <li>EMI Defaulter Prediction (ML Ops)</li>
+      <li>Reddit NLP Recommendation System</li>
+      <li>Fauna Disease Prediction Research (96.3% accuracy)</li>
+    </ul>
+  </section>
+
+  <!-- Certifications -->
+  <section class="container certifications">
+    <h2>Certifications</h2>
+    <p>AWS Solution Architect | Kubernetes Administrator | Terraform Associate | Google Analytics | OCI AI | Scrum Foundation</p>
+  </section>
 
   <footer>
-    <p>© 2025 Himanshu Joshi | Built with 💻 & ☕</p>
+    <p>© 2025 Himanshu Joshi</p>
   </footer>
 </body>
 </html>

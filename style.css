@@ -1,94 +1,139 @@
-* {
-    box-sizing: border-box;
+body {
     margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', sans-serif;
-  }
-  
-  body {
+    font-family: 'Nunito', sans-serif;
     background-color: #f0f2f5;
     color: #333;
-    line-height: 1.6;
   }
   
+  /* Hero */
   .hero {
-    background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?fit=crop&w=1400&q=80') center/cover no-repeat;
-    height: 100vh;
-    color: white;
-    text-align: center;
     position: relative;
+    height: 60vh;
+    background: url('https://source.unsplash.com/1600x900/?technology,cloud') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
   }
-  
-  .overlay {
-    background-color: rgba(0,0,0,0.6);
+  .hero .overlay {
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
   }
-  
   .hero-content {
     position: relative;
-    z-index: 2;
-    top: 50%;
-    transform: translateY(-50%);
+    z-index: 1;
   }
-  
-  .profile-img {
+  .hero .avatar {
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border: 5px solid white;
-    margin-bottom: 15px;
+    border: 5px solid #fff;
+    width: 120px;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+  }
+  .hero .avatar:hover {
+    transform: scale(1.1);
+  }
+  .hero h1 {
+    margin: 0;
+    font-size: 3rem;
+  }
+  .hero p {
+    font-size: 1.2rem;
+  }
+  .hero .social-links a {
+    margin: 0 10px;
+    color: #61dafb;
+    text-decoration: none;
+    font-weight: 600;
   }
   
-  .hero h1 {
-    font-size: 2.8rem;
+  /* Sections */
+  .container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .container h2 {
+    margin-top: 0;
+    color: #444;
+    border-bottom: 2px solid #61dafb;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+  
+  /* Cards */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  .card {
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    transition: transform 0.3s;
+  }
+  .card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  }
+  .card h3 {
+    margin: 0 0 10px;
+  }
+  .card span {
+    color: #666;
+  }
+  
+  /* Education Grid */
+  .edu-grid {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  .edu-item {
+    flex: 1;
+    text-align: center;
+  }
+  .edu-item img {
+    border-radius: 8px;
+  }
+  .edu-item h3 {
+    margin: 10px 0 5px;
+  }
+  
+  /* Awards */
+  .award-list {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+  }
+  .award-item {
+    text-align: center;
+  }
+  .award-item img {
+    width: 60px;
     margin-bottom: 10px;
   }
   
-  .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+  /* List styling */
+  section ul {
+    list-style: disc inside;
+    margin: 10px 0;
   }
   
-  .links a {
-    text-decoration: none;
-    margin: 0 15px;
-    color: #61dafb;
-    font-weight: bold;
-    font-size: 1.1rem;
-  }
-  
-  main {
-    padding: 40px 20px;
-    max-width: 960px;
-    margin: auto;
-  }
-  
-  .section {
-    margin-bottom: 40px;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.05);
-  }
-  
-  .section h2 {
-    color: #1f4b99;
-    margin-bottom: 15px;
-  }
-  
-  ul {
-    list-style: square inside;
-  }
-  
+  /* Footer */
   footer {
     text-align: center;
     padding: 20px;
-    background-color: #1f1f1f;
-    color: white;
-    font-size: 0.9rem;
+    background: #282c34;
+    color: #fff;
   }
   
