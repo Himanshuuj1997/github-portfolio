@@ -9,7 +9,7 @@ body {
   .hero {
     position: relative;
     height: 60vh;
-    background: url('https://source.unsplash.com/1600x900/?technology,cloud') center/cover no-repeat;
+    background: url('https://media.licdn.com/dms/image/v2/D5635AQHnOZows7UviQ/profile-framedphoto-shrink_400_400/profile-framedphoto-shrink_400_400/0/1735853121428?e=1746583200&v=beta&t=5tsZhzAzgMhst1UPYUeUp6B59SiRk8UVLITLpXjE9sA') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
