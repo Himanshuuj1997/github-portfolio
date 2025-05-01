@@ -124,12 +124,13 @@
                 <h2 class="section-title">Contact</h2>
 
                 <div class="contact__container bd-grid">
-                    <form action="mailto:hjoshi25@asu.edu" method="POST" enctype="text/plain" class="contact__form">
-                        <input type="text" placeholder="Name" class="contact__input" name="name">
-                        <input type="email" placeholder="Email" class="contact__input" name="email">
-                        <textarea name="message" placeholder="Message" class="contact__input"></textarea>
-                        <input type="submit" value="Send" class="contact__button button">
-                    </form>
+                  <form action="contact.php" method="POST" class="contact__form">
+                    <input type="text" name="name" placeholder="Name" class="contact__input" required>
+                    <input type="email" name="email" placeholder="Email" class="contact__input" required>
+                    <textarea name="message" placeholder="Message" class="contact__input" required></textarea>
+                    <input type="submit" value="Send" class="contact__button button">
+                </form>
+                </form>
                 </div>
             </section>
         </main>
