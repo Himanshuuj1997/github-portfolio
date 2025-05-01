@@ -1,116 +1,154 @@
-<!-- portfolio/index.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Himanshu Joshi - Cloud & Data Analytics Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <img class="avatar" src="https://source.unsplash.com/200x200/?portrait,man" alt="Himanshu Joshi">
-      <h1>Himanshu Joshi</h1>
-      <p>Cloud Enthusiast | Business Data Analytics | Security Analyst</p>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/himanshuuj" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/himanshuuj1997" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://himanshuuj1997.medium.com" aria-label="Medium"><i class="fab fa-medium"></i></a>
-        <a href="https://public.tableau.com/app/profile/himanshuuj1997" aria-label="Tableau"><i class="fa-solid fa-chart-simple"></i></a>
-        <a href="mailto:hjoshi25@asu.edu" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-      </div>
-    </div>
-  </section>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Summary -->
-  <section class="container summary">
-    <h2>Professional Summary</h2>
-    <p>Seasoned DevOps professional with 4+ years of experience in streamlining IT operations and applying data-driven strategies for business transformation. Proven success in automating workflows, reducing processing times, and improving system efficiency.</p>
-  </section>
+        <link rel="stylesheet" href="assets/css/styles.css">
 
-  <!-- Experience -->
-  <section class="container experience">
-    <h2>Experience</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Business Application Analyst 3</h3>
-        <span>Kingman Healthcare, AZ | Nov 2024–Present</span>
-      </div>
-      <div class="card">
-        <h3>Data Science Volunteer</h3>
-        <span>ASU | Jun 2024–Nov 2024</span>
-      </div>
-      <div class="card">
-        <h3>DevOps Engineer</h3>
-        <span>Avizva Solutions | May 2022–May 2023</span>
-      </div>
-      <div class="card">
-        <h3>Cloud Operation Engineer</h3>
-        <span>BlazeClan Technologies | Jun 2019–May 2022</span>
-      </div>
-    </div>
-  </section>
+        <!-- =====BOX ICONS===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
-  <!-- Education -->
-  <section class="container education">
-    <h2>Education</h2>
-    <div class="edu-grid">
-      <div class="edu-item">
-        <img src="https://source.unsplash.com/100x100/?university,cap" alt="ASU">
-        <h3>Arizona State University</h3>
-        <p>MS, Information Systems Management<br>Aug 2023 – Jul 2024</p>
-      </div>
-      <div class="edu-item">
-        <img src="https://source.unsplash.com/100x100/?engineering,gear" alt="Pune University">
-        <h3>University of Pune</h3>
-        <p>BE, Computer Science<br>Aug 2015 – Jul 2019</p>
-      </div>
-    </div>
-  </section>
+        <title>Himanshu Joshi | DevOps & Analytics Portfolio</title>
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">Himanshu</a>
+                </div>
 
-  <!-- Awards & Recognitions -->
-  <section class="container awards">
-    <h2>Awards & Recognitions</h2>
-    <div class="award-list">
-      <div class="award-item">
-        <img src="https://source.unsplash.com/80x80/?award,trophy" alt="You Made Difference Award">
-        <p>5× ‘You Made Difference’ Award at BlazeClan</p>
-      </div>
-      <div class="award-item">
-        <img src="https://source.unsplash.com/80x80/?scholarship" alt="PMO Scholarship">
-        <p>PMO Scholarship Scheme (Undergrad)</p>
-      </div>
-      <div class="award-item">
-        <img src="https://source.unsplash.com/80x80/?medal" alt="Graduate ISM International Aid">
-        <p>Graduate ISM International Aid</p>
-      </div>
-    </div>
-  </section>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </div>
 
-  <!-- Projects -->
-  <section class="container projects">
-    <h2>Projects</h2>
-    <ul>
-      <li>Global Happiness Visualization (Tableau)</li>
-      <li>EMI Defaulter Prediction (ML Ops)</li>
-      <li>Reddit NLP Recommendation System</li>
-      <li>Fauna Disease Prediction Research (96.3% accuracy)</li>
-    </ul>
-  </section>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
 
-  <!-- Certifications -->
-  <section class="container certifications">
-    <h2>Certifications</h2>
-    <p>AWS Solution Architect | Kubernetes Administrator | Terraform Associate | Google Analytics | OCI AI | Scrum Foundation</p>
-  </section>
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">Himanshu</span><br> DevOps & Analytics Expert</h1>
 
-  <footer>
-    <p>© 2025 Himanshu Joshi</p>
-  </footer>
-</body>
+                    <a href="mailto:hjoshi25@asu.edu" class="button">Contact</a>
+                </div>
+
+                <div class="home__social">
+                    <a href="https://www.linkedin.com/in/himanshuuj" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/himanshuuj1997" class="home__social-icon"><i class='bx bxl-github'></i></a>
+                    <a href="https://himanshuuj1997.medium.com" class="home__social-icon"><i class='bx bxl-medium'></i></a>
+                </div>
+
+                <div class="home__img">
+                    <svg class="home__blob" viewBox="0 0 479 467">
+                        <mask id="mask0" mask-type="alpha">
+                            <path d="M9.19024...Z"/>
+                        </mask>
+                        <g mask="url(#mask0)">
+                            <path d="M9.19024...Z"/>
+                            <image class="home__blob-img" x="50" y="60" href="assets/img/profile.jpg"/>
+                        </g>
+                    </svg>
+                </div>
+            </section>
+
+            <!--===== ABOUT =====-->
+            <section class="about section" id="about">
+                <h2 class="section-title">About</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="assets/img/about.jpg" alt="">
+                    </div>
+                    
+                    <div>
+                        <h2 class="about__subtitle">I'm Himanshu Joshi</h2>
+                        <p class="about__text">4+ years of experience in Cloud Operations, DevOps, and Data Analytics. Master’s in Information Systems Management from Arizona State University. Expert in streamlining infrastructure, boosting automation, and solving business problems with data. Certified AWS Architect, Terraform Associate, Kubernetes Admin, and more.</p>
+                    </div>                                    
+                </div>
+            </section>
+
+            <!--===== SKILLS =====-->
+            <section class="skills section" id="skills">
+                <h2 class="section-title">Skills</h2>
+
+                <div class="skills__container bd-grid">          
+                    <div>
+                        <h2 class="skills__subtitle">DevOps & Cloud</h2>
+                        <p class="skills__text">AWS (Lambda, ECS, Glue, IAM), Terraform, Jenkins, Docker, Kubernetes, Azure DevOps, GitHub Actions</p>
+                        <h2 class="skills__subtitle">Scripting & Data</h2>
+                        <p class="skills__text">Python, Bash, SQL (PostgreSQL, MySQL), ETL Pipelines, Redshift, Tableau, Machine Learning (ML Ops)</p>
+                        <h2 class="skills__subtitle">Tools & Platforms</h2>
+                        <p class="skills__text">Prometheus, Ansible, Chef, Puppet, BigFix, Jira, ServiceNow, CloudFront, API Gateway, RESTful Services</p>
+                    </div>
+                    
+                    <div>              
+                        <img src="assets/img/work3.jpg" alt="" class="skills__img">
+                    </div>
+                </div>
+            </section>
+
+            <!--===== WORK =====-->
+            <section class="work section" id="work">
+                <h2 class="section-title">Experience</h2>
+
+                <div class="work__container bd-grid">
+                    <div class="work__img">
+                        <p><strong>Kingman Healthcare, Inc</strong><br>Business Application Analyst 3<br>Nov 2024 – Present</p>
+                    </div>
+                    <div class="work__img">
+                        <p><strong>Learning Engineering Institute, ASU</strong><br>Data Science Volunteer<br>Jun 2024 – Nov 2024</p>
+                    </div>
+                    <div class="work__img">
+                        <p><strong>Avizva Solutions</strong><br>DevOps Engineer<br>May 2022 – May 2023</p>
+                    </div>
+                    <div class="work__img">
+                        <p><strong>BlazeClan Technologies</strong><br>Cloud Operation Engineer<br>Jun 2019 – May 2022</p>
+                    </div>
+                </div>
+            </section>
+
+            <!--===== CONTACT =====-->
+            <section class="contact section" id="contact">
+                <h2 class="section-title">Contact</h2>
+
+                <div class="contact__container bd-grid">
+                    <form action="mailto:hjoshi25@asu.edu" method="POST" enctype="text/plain" class="contact__form">
+                        <input type="text" placeholder="Name" class="contact__input" name="name">
+                        <input type="email" placeholder="Email" class="contact__input" name="email">
+                        <textarea name="message" placeholder="Message" class="contact__input"></textarea>
+                        <input type="submit" value="Send" class="contact__button button">
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <p class="footer__title">Himanshu Joshi</p>
+            <div class="footer__social">
+                <a href="https://www.linkedin.com/in/himanshuuj" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/himanshuuj1997" class="footer__icon"><i class='bx bxl-github'></i></a>
+                <a href="https://himanshuuj1997.medium.com" class="footer__icon"><i class='bx bxl-medium'></i></a>
+            </div>
+            <p class="footer__copy">© 2025 Himanshu Joshi. All rights reserved.</p>
+        </footer>
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
