@@ -91,6 +91,54 @@ body {
   .card span {
     color: #666;
   }
+
+  /* CSS for uniform card heights on mobile */
+  .Academics.bd-grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.work__img {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid #ccc; /* Add border to visualize card boundaries - remove later */
+    padding: 15px; /* Add some padding inside the cards */
+    margin-bottom: 10px; /* Add some space between cards */
+}
+
+.work__img strong a {
+    text-decoration: none; /* Remove underline from the link */
+    color: inherit; /* Inherit text color from parent */
+}
+
+.work__img p {
+    flex-grow: 1;
+    margin-bottom: 0; /* Remove default bottom margin for better alignment */
+}
+
+/* Media query for larger screens (adjust breakpoint as needed) */
+@media screen and (min-width: 769px) {
+    .Academics.bd-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Example grid for larger screens */
+        gap: 1.5rem;
+    }
+    .work__img {
+        height: auto; /* Reset height for grid layout */
+    }
+}
+
+/* Style for social media icons */
+.social-links a {
+    margin-right: 10px; /* Add spacing between icons */
+    color: #333; /* Adjust icon color */
+    font-size: 1.5em; /* Adjust icon size */
+}
+
+.social-links a:last-child {
+    margin-right: 0;
+}
   
   /* Education Grid */
   .edu-grid {
