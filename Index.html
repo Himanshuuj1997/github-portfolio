@@ -4,12 +4,22 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <!-- ===== Google Fonts ===== -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
         <link rel="stylesheet" href="assets/css/styles.css">
 
         <!-- =====BOX ICONS===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
         <title>Himanshu Joshi | DevOps & Analytics Portfolio</title>
+
+        <!-- Smooth Scroll -->
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+        </style>
 
     </head>
     <body>
@@ -27,6 +37,7 @@
                         <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                         <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
                         <li class="nav__item"><a href="#academics" class="nav__link">Academics</a></li>
+                        <li class="nav__item"><a href="#coding" class="nav__link">Projects</a></li>
                         <li class="nav__item"><a href="#life" class="nav__link">Life</a></li>
                         <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                     </ul>
@@ -50,9 +61,9 @@
                 </div>
 
                 <div class="home__social">
-                    <a href="https://www.linkedin.com/in/himanshuuj" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://github.com/himanshuuj1997" class="home__social-icon"><i class='bx bxl-github'></i></a>
-                    <a href="https://himanshuuj1997.medium.com" class="home__social-icon"><i class='bx bxl-medium'></i></a>
+                    <a href="https://www.linkedin.com/in/himanshuuj" class="home__social-icon" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/himanshuuj1997" class="home__social-icon" target="_blank"><i class='bx bxl-github'></i></a>
+                    <a href="https://himanshuuj1997.medium.com" class="home__social-icon" target="_blank"><i class='bx bxl-medium'></i></a>
                 </div>
 
                 <div class="home__img">
@@ -74,7 +85,7 @@
 
                 <div class="about__container bd-grid">
                     <div class="about__img">
-                        <img src="assets/img/about.jpeg" alt="">
+                        <img src="assets/img/about.jpeg" alt="Himanshu Joshi">
                     </div>
                     
                     <div>
@@ -99,7 +110,7 @@
                     </div>
                     
                     <div>              
-                        <img src="assets/img/work3.jpg" alt="" class="skills__img">
+                        <img src="assets/img/work3.jpg" alt="Work Image" class="skills__img">
                     </div>
                 </div>
             </section>
@@ -124,80 +135,57 @@
                 </div>
             </section>
 
-            <section class="Academics section" id="academics">
-              <h2 class="section-title">Academics</h2>
-              <div class="Academics bd-grid">
-                <div class="work__img">
-                    <p><strong><a href="https://himanshuuj1997.medium.com/enhancing-data-privacy-a-visionary-approach-using-tableau-on-a-private-linux-server-0a86adc5d0ca" target="_blank" rel="noopener noreferrer">Secure and Scalable Tableau Deployment on AWS: A Modern Approach to Data Visualization</a></strong><br>
-                      This blog introduces a secure approach to data visualization using Tableau by addressing concerns around protecting sensitive data during visualization processes.
-                      It highlights the limitations of traditional setups where Tableau is accessed on Windows servers, which can pose security risks.
-                      Instead, it proposes deploying Tableau as a web service on a private Linux server within a secure AWS infrastructure.
-                      This setup leverages authentication models, controlled access, and activity monitoring while integrating with cloud services like S3 and databases using IAM roles.
-                      The blog outlines key components like EC2 instances, load balancers, and firewalls to ensure privacy, scalability, and high availability.
-                      Server setup and cost details will be covered in the next post.
-                      <br></p>
-                </div>
-                <br>
-                <div class="Academics bd-grid">
-                  <div class="work__img">
-                      <p><strong><a href="https://himanshuuj1997.medium.com/predicting-emi-defaulters-with-mlops-bestcard-case-study-8113fc52722a" target="_blank" rel="noopener noreferrer">Predicting EMI Defaulters Using Machine Learning and MLOps: A Real-World Case Study with BestCard</a></strong><br>
-                        This blog presents a real-world data science project focused on predicting EMI defaulters for BestCard, a financial services company, as part of a Master’s specialization in data analytics.
-                        Leveraging machine learning models—especially XGBoost—and MLOps frameworks, the project successfully identified high-risk customers, resulting in $800k in annual loss reduction and $2 million in increased revenue. 
-                        The blog outlines the end-to-end process, including data preprocessing, feature engineering, model building, and deployment. 
-                        It also emphasizes the practical value of using automation and monitoring tools to maintain model performance in a production environment. 
-                        <br></p>
-                  </div>
-                  <br>
-                  <div class="Academics bd-grid">
-                    <div class="work__img">
-                        <p><strong><a href="https://himanshuuj1997.medium.com/introduction-learning-engineering-is-an-emerging-field-that-applies-scientific-principles-and-0eada98cbd82" target="_blank" rel="noopener noreferrer">Enhancing Writing Instruction Through Learning Engineering: Development and Visualization of the Writing Assessment Tool (WAT)</a></strong><br>
-                          The Writing Assessment Tool (WAT) project, grounded in the emerging field of Learning Engineering, leverages data analytics, NLP algorithms, and human-centered design to improve writing instruction and assessment. 
-                          Designed for students, educators, and researchers, WAT provides automated feedback on various essay types, reduces teacher workload, and enables data-informed instruction. 
-                          The development process involved iterative design, participatory feedback, and continuous enhancement, addressing key challenges like data ethics and algorithmic fairness. 
-                          Complementing the tool is an extensive suite of dynamic, user-driven visualizations aimed at analyzing student performance across tasks, drafts, metrics, and time. 
-                          The visualizations evolved from basic classroom-level overviews to advanced, interactive dashboards, offering educators actionable insights and helping shape the future of personalized education.
-                          <br></p>
-                    </div>
-                    <br>
-                    <div class="Academics bd-grid">
-                      <div class="work__img">
-                          <p><strong><a href="https://himanshuuj1997.medium.com/the-article-introduces-a-comprehensive-approach-to-leaf-species-detection-and-classification-09264c219b07" target="_blank" rel="noopener noreferrer">Leaf Species Classification Using Image Processing and Deep Learning</a></strong><br>
-                            This article presents a robust and systematic approach to leaf species classification using image processing and machine learning, particularly convolutional neural networks (CNNs). 
-                            The workflow involves multiple stages, including image acquisition, preprocessing, segmentation, feature extraction, and classification. 
-                            Enhanced by libraries like OpenCV, PIL, Mahotas, and Matplotlib, the system achieves high classification accuracy (up to 97%) across diverse leaf datasets.
-                            Key techniques include contrast enhancement, morphological operations, texture analysis, and dual-stage CNN-based classification. 
-                            Additionally, the article outlines various advanced image processing algorithms and potential enhancements using transfer learning and deep learning architectures.
-                            This comprehensive methodology highlights the power of Python-based tools in developing scalable, accurate solutions for plant species recognition.
-                            <br></p>
-                      </div>
-                      <br>
-                      <div class="Academics bd-grid">
-                        <div class="work__img">
-                            <p><strong><a href="https://himanshuuj1997.medium.com/building-a-full-scale-devops-architecture-on-aws-with-terraform-and-jenkins-ac9ea67e1646" target="_blank" rel="noopener noreferrer">End-to-End DevOps Architecture on AWS: A Terraform and Jenkins Approach</a></strong><br>
-                              This blog outlines a comprehensive, production-ready DevOps architecture built on AWS, leveraging Terraform for Infrastructure as Code (IaC) and Jenkins for continuous integration and delivery (CI/CD).
-                              The system integrates key AWS services including EC2, Lambda, RDS, EKS, and Elastic Beanstalk to ensure scalability, automation, and high availability. 
-                              Each Terraform file within the repository corresponds to a critical infrastructure component, such as compute resources, API management, database provisioning, and networking. 
-                              Additionally, a Jenkins pipeline automates code deployment and infrastructure changes, enhancing operational efficiency.
-                              The implementation emphasizes secure configurations through IAM roles and Secrets Manager, while visualization and state management files ensure clarity and consistency in deployments.
-                              Overall, this architecture provides a robust framework for deploying and managing cloud-native applications with minimal manual intervention.
-                              <br></p>
-                        </div>  
-                        <br>
-                        <div class="Academics bd-grid">
-                          <div class="work__img">
-                              <p><strong><a href="https://himanshuuj1997.medium.com/revolutionizing-u-s-nonprofit-hospitals-with-healthcare-informatics-and-it-innovation-fceda046f04f" target="_blank" rel="noopener noreferrer">Innovating Healthcare IT: Strategies for Nonprofit Hospitals to Embrace the Future</a></strong><br>
-                                In the face of mounting challenges and outdated infrastructure, nonprofit hospitals must embrace digital transformation to remain effective and patient-focused. 
-                                This article outlines a strategic roadmap for modernizing healthcare IT systems, with insights from a Business Analyst's perspective. 
-                                It emphasizes the importance of cloud computing, Kubernetes, Docker, and advanced EHR systems like Epic in enhancing operational efficiency, data-driven decision-making, and patient care.
-                                Key recommendations include streamlining internal processes with SOPs, automating workflows using AI and machine learning, migrating from legacy systems to the cloud, and leveraging ITSM tools like Jira and Confluence. 
-                                Ultimately, by adopting cutting-edge technologies and fostering a culture of innovation, nonprofit hospitals can build a scalable, secure, and future-ready healthcare ecosystem.
-                                <br></p>
-                          </div>     
-              </div>
-          </section>
+        <section class="Academics section" id="academics">
+  <h2 class="section-title">Academics</h2>
+  <div class="Academics bd-grid">
+    <div class="work__img">
+      <p><strong><a href="https://himanshuuj1997.medium.com/enhancing-data-privacy-a-visionary-approach-using-tableau-on-a-private-linux-server-0a86adc5d0ca" 
+        target="_blank" rel="noopener noreferrer">Secure and Scalable Tableau Deployment on AWS: A Modern Approach to Data Visualization</a></strong><br>
+        This blog introduces a secure approach to data visualization using Tableau by addressing concerns around protecting sensitive data during visualization processes.
+        It highlights the limitations of traditional setups where Tableau is accessed on Windows servers, which can pose security risks. Instead, it proposes deploying Tableau as a web service on a private Linux server within a secure AWS infrastructure.
+        This setup leverages authentication models, controlled access, and activity monitoring while integrating with cloud services like S3 and databases using IAM roles. The blog outlines key components like EC2 instances, load balancers, and firewalls to ensure privacy, scalability, and high availability.
+        Server setup and cost details will be covered in the next post.
+      </p>
+      <br>   
+    </div>
+    <div class="work__img">
+      <p><strong><a href="https://himanshuuj1997.medium.com/predicting-emi-defaulters-with-mlops-bestcard-case-study-8113fc52722a" 
+        target="_blank" rel="noopener noreferrer">Predicting EMI Defaulters Using Machine Learning and MLOps: A Real-World Case Study with BestCard</a></strong><br>
+        This blog presents a real-world data science project focused on predicting EMI defaulters for BestCard, a financial services company, as part of a Master’s specialization in data analytics.
+        Leveraging machine learning models—especially XGBoost—and MLOps frameworks, the project successfully identified high-risk customers, resulting in $800k in annual loss reduction and $2 million in increased revenue.
+        The blog outlines the end-to-end process, including data preprocessing, feature engineering, model building, and deployment. It also emphasizes the practical value of using automation and monitoring tools to maintain model performance in a production environment.
+      </p>   <br>
+    </div>
+    <div class="work__img">
+      <p><strong><a href="https://himanshuuj1997.medium.com/introduction-learning-engineering-is-an-emerging-field-that-applies-scientific-principles-and-0eada98cbd82" 
+        target="_blank" rel="noopener noreferrer">Enhancing Writing Instruction Through Learning Engineering: Development and Visualization of the Writing Assessment Tool (WAT)</a></strong><br>
+        The Writing Assessment Tool (WAT) project, grounded in the emerging field of Learning Engineering, leverages data analytics, NLP algorithms, and human-centered design to improve writing instruction and assessment.
+        Designed for students, educators, and researchers, WAT provides automated feedback on various essay types, reduces teacher workload, and enables data-informed instruction. The development process involved iterative design, participatory feedback, and continuous enhancement, addressing key challenges like data ethics and algorithmic fairness.
+        Complementing the tool is an extensive suite of dynamic, user-driven visualizations aimed at analyzing student performance across tasks, drafts, metrics, and time. The visualizations evolved from basic classroom-level overviews to advanced, interactive dashboards, offering educators actionable insights and helping shape the future of personalized education.
+      </p>   <br>
+    </div>
+    <div class="work__img">
+      <p><strong><a href="https://himanshuuj1997.medium.com/the-article-introduces-a-comprehensive-approach-to-leaf-species-detection-and-classification-09264c219b07" 
+        target="_blank" rel="noopener noreferrer">Leaf Species Classification Using Image Processing and Deep Learning</a></strong><br>
+        This article presents a robust and systematic approach to leaf species classification using image processing and machine learning, particularly convolutional neural networks (CNNs).
+        The workflow involves multiple stages, including image acquisition, preprocessing, segmentation, feature extraction, and classification. Enhanced by libraries like OpenCV, PIL, Mahotas, and Matplotlib, the system achieves high classification accuracy (up to 97%) across diverse leaf datasets.
+        Key techniques include contrast enhancement, morphological operations, texture analysis, and dual-stage CNN-based classification. Additionally, the article outlines various advanced image processing algorithms and potential enhancements using transfer learning and deep learning architectures.
+      </p>   <br>
+    </div>
+    <div class="work__img">
+      <p><strong><a href="https://himanshuuj1997.medium.com/building-a-full-scale-devops-architecture-on-aws-with-terraform-and-jenkins-ac9ea67e1646" 
+        target="_blank" rel="noopener noreferrer">End-to-End DevOps Architecture on AWS: A Terraform and Jenkins Approach</a></strong><br>
+        This blog outlines a comprehensive, production-ready DevOps architecture built on AWS, leveraging Terraform for Infrastructure as Code (IaC) and Jenkins for continuous integration and delivery (CI/CD).
+        The system integrates key AWS services including EC2, Lambda, RDS, EKS, and Elastic Beanstalk to ensure scalability, automation, and high availability. Each Terraform file within the repository corresponds to a critical infrastructure component, such as compute resources, API management, database provisioning, and networking.
+        Additionally, a Jenkins pipeline automates code deployment and infrastructure changes, enhancing operational efficiency. The implementation emphasizes secure configurations through IAM roles and Secrets Manager, while visualization and state management files ensure clarity and consistency in deployments.
+      </p>   <br>
+    </div>
+  </div>
+</section>
 
-            <!--===== CONTACT =====-->
-            <section class="contact section" id="contact">
+
+          <!--===== CONTACT =====-->
+          <section class="contact section" id="contact">
                 <h2 class="section-title">Contact</h2>
 
                 <div class="contact__container bd-grid">
@@ -206,7 +194,6 @@
                     <input type="email" name="email" placeholder="Email" class="contact__input" required>
                     <textarea name="message" placeholder="Message" class="contact__input" required></textarea>
                     <input type="submit" value="Send" class="contact__button button">
-                </form>
                 </form>
                 </div>
             </section>
