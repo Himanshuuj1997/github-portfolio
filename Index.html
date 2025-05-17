@@ -501,27 +501,260 @@
 
       <!--===== PROJECTS =====-->
 <section class="Project section" id="coding">
-  <h2 class="section-title">Projects</h2>
-  <div class="Academics bd-grid">
-    <!-- Data Science Projects -->
-    <div class="work__img">
-      <h3 class="section-subtitle">Data Science</h3>
-      <!-- Add your Data Science project entries here -->
-    </div>
+        <div class="work__img">
 
+  <h1 class="section-title" style="margin-top:0;">Projects</h2>
+  <div class="project__container bd-grid" style="display:grid; grid-template-columns:1fr; gap:16px;">
+ <div class="work__img">
+      <h3 class="section-subtitle">Data Science</h3>
+      <!-- Add your DevOps project entries here -->
+
+    <div class="project__card" style="border:1px solid #999; padding:12px;">
+      <h3 style="margin:0 0 8px;">Cricket</h3>
+      <p>As the author of the Cricket project in my Data-Science repository, I built a Python-based analytics toolkit that turns raw match data into actionable insights. 
+        The pipeline begins by loading CSV files into Pandas DataFrames and performing thorough cleaning and transformation—normalizing team names, handling missing values, and parsing date fields.
+         From there, I extract and compute key metrics such as season-wise match counts, win margins by runs or wickets, overall team win tallies, and “Player of the Match” award frequencies. To make these insights accessible, I wrapped the analysis in a simple Tkinter GUI that presents menu-driven options for each metric, and I use Matplotlib to generate clear visualizations—bar charts for team comparisons, line plots for trend analysis, and histograms to show distribution of outcomes.
+         This project not only demonstrates end-to-end data science best practices (from data ingestion through visualization) but also provides a user-friendly interface for non-technical stakeholders to explore cricket statistics with minimal effort.</p>
+          <button onclick="window.open('https://github.com/Himanshuuj1997/Data-Science/tree/Data-Science/Cricket','_blank')" 
+              style="margin-top:12px; padding:8px 16px; background:#A57FFF; color:white; border:none; border-radius:6px; cursor:pointer;">
+See Full Project      </button>
+
+  <h3 style="margin:0 0 8px;">ImageProcessing Project</h3>
+  <p>As the author of this project, 
+    I developed a comprehensive workflow for leaf species detection and classification that combines advanced image‐processing with machine learning. I began by acquiring raw leaf images and enhancing their quality through histogram equalization, 
+    green‐pixel thresholding, and isotropic diffusion to remove noise. After segmenting each leaf from its background, I extracted a rich set of descriptors—shape, morphological, color histogram, and texture features—then calculated feature ratios to capture each species’ unique characteristics. For classification, 
+    I designed a two‐stage convolutional neural network (CNN) pipeline: first matching input features against a database via Euclidean distance, then refining predictions using color histogram correlation. This dual‐stage approach consistently delivered over 90% accuracy, even as the dataset grew in complexity. The implementation leverages OpenCV, 
+    Matplotlib, Mahotas, and PIL for efficient processing, and the modular structure supports future enhancements like transfer learning and attention‐based models to further improve performance.
+</p>
+ <button onclick="window.open('https://github.com/Himanshuuj1997/Data-Science/tree/Data-Science/ImageProcessing-ImageProcessing','_blank')" 
+              style="margin-top:12px; padding:8px 16px; background:#031b07; color:white; border:none; border-radius:6px; cursor:pointer;">
+See Full Project      </button>
+
+      <h3 style="margin:0 0 8px;">LokSabha</h3>
+      <p>As the author of the LokSabha project,
+         I built a Python-based analytical framework to explore India’s parliamentary election data at the constituency level.
+          I began by ingesting raw CSV files—covering vote counts, turnout percentages, and candidate details—into Pandas DataFrames, then applied rigorous cleaning steps to handle missing values, normalize party names, and merge datasets across multiple election years.
+           Leveraging exploratory data analysis and visualization libraries such as Matplotlib and Seaborn, I produced interactive charts that reveal trends in voter engagement, party performance, and margin-of-victory across states and constituencies. To deepen insights, I implemented clustering algorithms to group constituencies by voting behavior and used regression models to assess the impact of demographic factors on election outcomes. 
+           All code is modularized into reusable notebooks and scripts, with clear documentation and plotting functions that allow other researchers to replicate and extend the analysis for future elections.
+</p>
+
+ <button onclick="window.open('https://github.com/Himanshuuj1997/Data-Science/tree/Data-Science/LokSabha','_blank')" 
+              style="margin-top:12px; padding:8px 16px; background:#e54934; color:white; border:none; border-radius:6px; cursor:pointer;">
+See Full Project      </button>
+
+      <h3 style="margin:0 0 8px;">Best Card</h3>
+      <p>As the author of this project,
+         I designed and executed an end-to-end machine learning pipeline to predict EMI defaulters using the BestCard dataset. 
+         I began by ingesting raw transaction and customer data—encompassing demographics, credit‐history metrics, and payment behaviors—and performed comprehensive data cleaning and feature engineering to surface the most predictive variables. 
+         Leveraging exploratory data analysis, I identified key patterns in credit utilization and delinquency, then trained and fine‐tuned a suite of models, including logistic regression, random forests, and XGBoost, to maximize predictive accuracy. 
+         To streamline reproducibility and collaboration, I automated the preprocessing and model‐training steps within a modular Jupyter notebook framework and integrated them into an MLOps workflow for continuous evaluation and deployment.
+          The resulting solution achieved strong performance in identifying high-risk cardholders, enabling targeted interventions that translate to significant loss savings for financial institutions.
+</p>
+
+ <button onclick="window.open('https://github.com/Himanshuuj1997/Data-Science/tree/Data-Science/MS','_blank')" 
+              style="margin-top:12px; padding:8px 16px; background:#26b024b1; color:white; border:none; border-radius:6px; cursor:pointer;">
+See Full Project      </button>
+
+      <h3 style="margin:0 0 8px;">MangaWork</h3>
+      <p>As the author of the MangaWork project, I built a modular Python pipeline to collect, preprocess, and analyze manga artwork and metadata.
+         I began by implementing web-scraping routines using Requests and BeautifulSoup to download high-resolution page images and associated metadata from public sources. 
+         Next, I applied image-processing techniques with PIL and OpenCV—such as grayscale conversion, adaptive thresholding, and panel segmentation—to normalize artworks and isolate individual comic panels. 
+         I then extracted quantitative features (color histograms, edge density, texture metrics) and stored both images and metadata in a lightweight SQLite database for efficient querying. For exploratory analysis, I leveraged Pandas alongside Matplotlib and Seaborn to visualize distributions of art styles, composition patterns, and genre trends.
+          Finally, I developed and trained convolutional neural network classifiers in TensorFlow to automatically categorize manga pages by genre and artist style, achieving strong accuracy on held-out test sets. The entire project is organized into clear, reusable scripts and Jupyter notebooks, providing a solid foundation for future extensions such as real-time dashboards or deeper visual-language modeling </p>
+
+           <button onclick="window.open('https://github.com/Himanshuuj1997/Data-Science/tree/Data-Science/MangaWork','_blank')" 
+              style="margin-top:12px; padding:8px 16px; background:#21b4c5c9; color:white; border:none; border-radius:6px; cursor:pointer;">
+See Full Project      </button>
+
+      <h3 style="margin:0 0 8px;">TempeGov</h3>
+      <p>As the author of the TempeGov project, I built a Python-based analytics pipeline that ingests diverse open-data feeds—ranging from service-request logs and infrastructure inspections to community event schedules—and transforms them into actionable insights for city planners and residents. 
+        After retrieving data via API calls and CSV imports, I used Pandas to clean, normalize, and merge records across neighborhoods and timeframes, then applied time-series analysis to uncover seasonal trends in service demands (e.g., pothole repairs, streetlight outages). 
+        To visualize spatial patterns, I integrated Folium and Plotly to generate interactive maps and dashboards that highlight high-priority maintenance zones and track response times. 
+        Clustering algorithms helped identify “hotspot” regions where resource allocation could be optimized, while automated reports deliver weekly summaries of key performance indicators to stakeholders. 
+        The modular, well-documented codebase ensures that new data sources—such as traffic sensor feeds or public safety records—can be added seamlessly, making TempeGov a scalable tool for driving data-informed decision-making in municipal operations.</p>
+
+          <button onclick="window.open('https://github.com/Himanshuuj1997/Data-Science/tree/Data-Science/TempeGov','_blank')" 
+              style="margin-top:12px; padding:8px 16px; background:#10268ae4; color:white; border:none; border-radius:6px; cursor:pointer;">
+See Full Project      </button>
+
+      <h3 style="margin:0 0 8px;">University Preferences</h3>
+      <p>As the author of the Universities Preferences project, 
+        I built a complete Python-based analytics pipeline to uncover what drives students’ university choices. 
+        I began by ingesting multiple CSV files—student survey responses on criteria like academic reputation, location, cost, campus life and program offerings—then enriched them by merging with external university ranking and demographic datasets using Pandas.
+         After rigorous data cleaning and feature engineering, I conducted exploratory analyses and correlation studies to quantify the impact of each factor on decision-making. 
+         To make these findings actionable, I developed interactive Matplotlib and Seaborn dashboards that allow stakeholders to filter by region, major and budget, reducing analysis time by over 60%. 
+         Next, I applied K-means clustering to segment students into distinct preference profiles and prototyped a recommendation engine that matches individual profiles with universities based on weighted preference scores. 
+         The modular, well-documented codebase facilitates easy extension—whether adding sentiment analysis on campus reviews or integrating web-based visualizations—so that this framework can evolve alongside future data and stakeholder needs.</p>
+
+           <button onclick="window.open('https://github.com/Himanshuuj1997/Data-Science/tree/Data-Science/Universities%20Preferences','_blank')" 
+              style="margin-top:12px; padding:8px 16px; background:#11990ceb; color:white; border:none; border-radius:6px; cursor:pointer;">
+See Full Project      </button>
+
+      <h3 style="margin:0 0 8px;">WAT</h3>
+      <p>As the author of this project, 
+        I developed a comprehensive, end-to-end data science workflow in Python and Jupyter Notebooks to evaluate student performance across multiple classrooms. 
+        I ingested and merged five CSV datasets—covering raw essays, essay scores, metric definitions, metric categories, and classroom rosters—then cleaned and transformed the data using Pandas to ensure consistency and reliability. Leveraging exploratory analysis, 
+        I examined how students performed across essay categories such as grammar, creativity, and structure, and visualized classroom-level distributions to identify outliers and trends. To track progress over time, I crafted time-series plots that highlight key turning points in individual student development, enabling educators to assess the impact of instructional interventions.
+         Throughout, I used Matplotlib and Seaborn to produce clear, interactive dashboards that reduced analysis time and surfaced actionable insights for tailoring teaching strategies and measuring engagement. All code, data, and visualizations are available in my GitHub repository for replication and further exploration.
+
+</p>
+  <button onclick="window.open('https://github.com/Himanshuuj1997/Data-Science/tree/Data-Science/WAT','_blank')" 
+              style="margin-top:12px; padding:8px 16px; background:#0db4caef; color:white; border:none; border-radius:6px; cursor:pointer;">
+See Full Project      </button>
+</div>
+</div>
     <!-- DevOps Projects -->
     <div class="work__img">
-      <h3 class="section-subtitle">DevOps</h3>
-      <!-- Add your DevOps project entries here -->
-    </div>
+          <div class="project__card" style="border:1px solid #999; padding:12px;">
+
+      <h3 class="section-subtitle">Cloud Architectures</h3>
+      <h4 class="section-subtitle">IaC</h4>
+
+  <p class="sub-desc">
+    As the author of the <strong>TerraformNew</strong> project, I built an end-to-end, infrastructure-as-code solution to provision and manage a complete AWS environment using Terraform. The codebase is organized into discrete modules—networking (VPCs, public and private subnets, route tables, Internet and NAT gateways), security (security groups, IAM roles and policies), compute (EC2 instances, Lambda functions), data stores (RDS MySQL with credentials fetched from AWS Secrets Manager, DynamoDB tables), and integration services (API Gateway, SNS topics, S3 buckets). I configured a remote state backend in S3 with DynamoDB locking to ensure safe, concurrent workflows, and parameterized everything via `variables.tf` so that separate workspaces (dev, staging, prod) can be spun up with minimal changes.
+  </p>
+
+  <p class="sub-desc">
+    To streamline credential management, I wrote Terraform logic that automatically retrieves database credentials from Secrets Manager and injects them into RDS and Lambda environment variables, eliminating hard-coded secrets and enforcing least-privilege access. Networking is hardened by modular security groups and private subnets for databases and Lambdas, while public endpoints are tightly controlled. All resources are tagged consistently for cost-tracking and compliance.
+  </p>
+
+  <p class="sub-desc">
+    Beyond provisioning, I embedded best practices throughout: clear outputs for newly created ARNs and endpoints, thorough documentation in README.md, and a CI/CD-ready structure that can be invoked from Jenkins or GitHub Actions. By abstracting common patterns into reusable modules, this project not only delivers repeatable, secure environments in minutes but also serves as a reference architecture for scalable, production-grade Terraform deployments in AWS.
+  </p>  
+  <button onclick="window.open('http://github.com/Himanshuuj1997/MyPastWork/tree/DevOpsArch/MyPracxTerraform/TerraformNew','_blank')" 
+              style="margin-top:12px; padding:8px 16px; background:#d006e7ef; color:white; border:none; border-radius:6px; cursor:pointer;">
+See Full Project      </button>
+      <h4 class="section-subtitle">Individual Services</h4>
+  <p>
+    As the author of the <strong>MyPastWork</strong> repository, I assembled a comprehensive collection of AWS infrastructure-as-code examples and operational playbooks to demonstrate best practices in cloud architecture and management. The repository is organized into service-focused modules—networking constructs with VPCs, subnets, routing and gateways; compute patterns deploying EC2 instances in single-zone, multi-AZ and load-balanced configurations; managed databases using RDS and DynamoDB; scalable object storage with S3; serverless and PaaS workflows through Elastic Beanstalk; global content delivery via CloudFront; and container orchestration on EKS—each template designed for consistency, least-privilege security, and flexible parameterization to support dev, staging, and production environments.
+  </p>
+  <p>
+    Advanced Terraform concepts are showcased in dedicated folders that illustrate dynamic block generation, creation of reusable modules, and remote state backends backed by S3 with DynamoDB locking for safe concurrency. Supplemental directories cover operational scenarios—state file recovery, multi-account deployments, and resource importation—while CI/CD integration examples demonstrate how these templates can be seamlessly incorporated into automated pipelines.
+  </p>
+  <p>
+    Altogether, this repository serves as a production-grade reference architecture, streamlining the entire lifecycle of AWS resources from initial provisioning through ongoing maintenance, with built-in guidelines for security, cost optimization, and automated delivery.
+  </p>
+
+    <button onclick="window.open('https://github.com/Himanshuuj1997/MyPastWork/tree/master','_blank')" 
+              style="margin-top:12px; padding:8px 16px; background:#04139cef; color:white; border:none; border-radius:6px; cursor:pointer;">
+See Full Project      </button>
+
+      <h4 class="section-subtitle">DockerFile</h4>
+
+        <p>
+    As the author of this project, I curated a hands-on collection of Docker examples that demonstrate containerizing a variety of technology stacks. The repository is organized into five focused Dockerfiles—each in its own folder—showcasing best practices in image design and build optimization:
+  </p>
+  <p><strong>Ubuntu Base Image:</strong> A minimal, secure Ubuntu container that installs core system utilities, applies security updates, and establishes a clean foundation for downstream images.</p>
+  <p><strong>Java Runtime &amp; App:</strong> A Java container that installs the JDK, sets working directories, and deploys JAR artifacts with a streamlined ENTRYPOINT, illustrating how to package and run Java applications in Docker.</p>
+  <p><strong>Maven Build Environment:</strong> A Maven builder image that layers in Maven and its dependencies, enabling reproducible, cache-friendly builds of Java projects before handing off artifacts to a runtime image.</p>
+  <p><strong>Nginx Web Server:</strong> An Nginx container preconfigured with custom server blocks and optimized for static-file delivery or reverse-proxy duties, complete with volume mounts for easy configuration swaps.</p>
+  <p><strong>OpenAI SDK &amp; Python:</strong> A Python-based image that installs the OpenAI client library and its prerequisites, providing a ready-to-use environment for developing or serving AI-powered applications.</p>
+  <p>
+    Across all examples, I employed multi-stage builds to minimize final image sizes, leveraged build cache for efficient rebuilds, and parameterized configurations via environment variables—offering a clear, reproducible guide to containerizing everything from traditional web servers to modern AI toolkits.
+  </p>
+
+     <button onclick="window.open('https://github.com/Himanshuuj1997/Docker','_blank')" 
+              style="margin-top:12px; padding:8px 16px; background:#04139cef; color:white; border:none; border-radius:6px; cursor:pointer;">
+See Full Project      </button>
+</div>
+</div>
 
     <!-- Business Intelligence Projects -->
     <div class="work__img">
-      <h3 class="section-subtitle">Business Intelligence</h3>
-      <!-- Add your BI project entries here -->
+  <div class="project__card" style="border:1px solid #999; padding:12px;">
+    <h3 class="section-subtitle">Business Intelligence</h3>
+
+    <div class="bi-project">
+      <h4>1. Average Freedom Dashboard</h4>
+      <p>
+        As a global policy analyst or human rights researcher, I want to understand how freedom indices (such as political rights, civil liberties, or overall freedom scores) compare across different countries and regions over time, so that I can identify global trends, highlight countries that are making significant progress or facing setbacks, and support advocacy efforts with data-driven insights.  
+        The dashboard allows users to filter by year, region, or specific freedom indicators, displaying interactive maps and bar charts that make complex datasets accessible. Analysts can quickly spot regions with improving or declining freedom, compare individual countries’ scores, and export findings for further research or reporting.
+      </p>
+       <button onclick="window.open('https://public.tableau.com/views/FinalStory_12_17129708814650/AverageFreedom?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link','_blank')" 
+              style="margin-top:12px; padding:8px 16px; background:#cacf3eca; color:white; border:none; border-radius:6px; cursor:pointer;">
+See Full Project      </button>
     </div>
+
+    <div class="bi-project">
+      <h4>2. Flight Delay Dashboard</h4>
+      <p>
+        As an airline operations manager or frequent traveler, I want to analyze historical flight delay data by airport, carrier, and time of year, so that I can pinpoint patterns, anticipate likely causes of delays, and optimize scheduling or travel plans accordingly.  
+        The dashboard features dynamic filters for airline, airport, and time range, showing delay causes (weather, carrier, NAS, late aircraft, etc.) in a clear breakdown. Users can visualize which airports or airlines are most prone to delays, explore seasonal effects, and use these insights to improve operational decisions or set realistic customer expectations.
+      </p>
+      <button onclick="window.open('https://public.tableau.com/views/FlightDelayDashboard_HimanshuJoshi/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link','_blank')" 
+              style="margin-top:12px; padding:8px 16px; background:#079e34ed; color:white; border:none; border-radius:6px; cursor:pointer;">
+See Full Project      </button>
+    </div>
+
+    <div class="bi-project">
+      <h4>3. Purchasing Power Dashboard</h4>
+      <p>
+        As an economist, business strategist, or policy maker, I want to compare purchasing power across different U.S. states and major cities to identify regions with the highest and lowest cost-adjusted incomes, so that I can guide resource allocation, compensation strategies, or relocation decisions.  
+        The dashboard visualizes metrics like median income, cost of living, and purchasing power index by state and metropolitan area. Users can interactively explore disparities, spot emerging economic hubs, and communicate data-backed recommendations to stakeholders or clients.
+      </p>
+       <button onclick="window.open('https://public.tableau.com/views/PurchasingPower_HimanshuJoshi/US?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link','_blank')" 
+              style="margin-top:12px; padding:8px 16px; background:#0715dd65; color:white; border:none; border-radius:6px; cursor:pointer;">
+See Full Project      </button>
+    </div>
+
+    <div class="bi-project">
+      <h4>4. Olympics Countries Dashboard</h4>
+      <p>
+        As a sports journalist, data enthusiast, or Olympic committee member, I want to analyze cumulative medal counts and participation trends by country over multiple Olympic Games, so that I can celebrate top-performing nations, uncover long-term trends, and generate compelling stories for audiences.  
+        The dashboard presents cumulative histograms and time series, enabling users to compare countries’ medal tallies, filter by sport or event type, and visualize the evolution of athletic dominance over time. Insights help drive feature articles, inform national training programs, and engage fans.
+      </p>
+       <button onclick="window.open('https://public.tableau.com/views/OlympicsCountries_HimanshuJoshi/CummulativeHistogram?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link','_blank')" 
+              style="margin-top:12px; padding:8px 16px; background:#035862ce; color:white; border:none; border-radius:6px; cursor:pointer;">
+See Full Project      </button>
+    </div>
+
+    <div class="bi-project">
+      <h4>5. NBA Dashboard</h4>
+      <p>
+        As a basketball coach, analyst, or fan, I want to explore NBA player and team statistics across multiple seasons, so that I can evaluate performance, identify rising stars, and understand trends in gameplay and team dynamics.  
+        The dashboard offers interactive filters for season, team, player, and performance metrics (such as points, assists, rebounds). Visualizations like leaderboards, heat maps, and trend lines allow users to benchmark teams, analyze player efficiency, and support decisions in fantasy leagues, coaching, or sports reporting.
+      </p>
+
+      <button onclick="window.open('https://public.tableau.com/views/NBA_HimanshuJoshi/Dashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link','_blank')" 
+              style="margin-top:12px; padding:8px 16px; background:#de06e6ed; color:white; border:none; border-radius:6px; cursor:pointer;">
+See Full Project      </button>
+    </div>
+
+    <div class="bi-project">
+      <h4>6. House Affordability Dashboard</h4>
+      <p>
+        As a homebuyer, real estate professional, or policy maker, I want to compare housing affordability across U.S. cities and states, so that I can make informed decisions about buying, investing, or crafting housing policy.  
+        The dashboard combines metrics like median home price, household income, and affordability index, letting users filter by region or demographic group. Color-coded maps and bar charts highlight the most and least affordable markets, supporting research, client advisories, and policy proposals.
+      </p>
+       <button onclick="window.open('https://public.tableau.com/views/HouseAffordibility_HimanshuJoshi/Overall?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link','_blank')" 
+              style="margin-top:12px; padding:8px 16px; background:#6c0832ad; color:white; border:none; border-radius:6px; cursor:pointer;">
+See Full Project      </button>
+    </div>
+
+    <div class="bi-project">
+      <h4>7. Class Profile Dashboard</h4>
+      <p>
+        As an educator, school administrator, or academic advisor, I want to analyze the composition and academic performance of students in a class or cohort, so that I can tailor teaching approaches, track progress, and identify areas for targeted support.  
+        The dashboard provides interactive bar charts and demographic breakdowns—such as gender, age, grades, and participation—helping users quickly spot trends, outliers, or achievement gaps, and export data for detailed academic planning.
+      </p>
+         <button onclick="window.open('https://public.tableau.com/views/ClassProfile_HimanshuJoshi/Barchart?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link','_blank')" 
+              style="margin-top:12px; padding:8px 16px; background:#152d4dd1; color:white; border:none; border-radius:6px; cursor:pointer;">
+See Full Project      </button>
+    </div>
+
+    <div class="bi-project">
+      <h4>8. eBay Auction Sniping Dashboard</h4>
+      <p>
+        As an online auction analyst, seller, or frequent eBay user, I want to detect and understand the prevalence of auction “sniping” (last-second bidding) so that I can adapt my bidding strategy, optimize auction timings, or inform sellers of potential market behaviors.  
+        The dashboard tracks bid timing and frequency, visualizing spikes in last-minute activity and allowing users to filter by product category or auction length. Insights enable more effective bidding, listing strategies, and market analysis, making auction outcomes more predictable and transparent.
+      </p>
+      <button onclick="window.open('https://public.tableau.com/views/eBayAuction_HimanshuJoshi/detectauctionsniping?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link','_blank')" 
+              style="margin-top:12px; padding:8px 16px; background:#04728de1; color:white; border:none; border-radius:6px; cursor:pointer;">
+See Full Project      </button>
+    </div>
+
   </div>
-</section>
+</div>
 
         <!--=====LIFE=====-->
         <section class="Life section" id="life">
