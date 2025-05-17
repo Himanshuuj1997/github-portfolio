@@ -26,8 +26,9 @@
     <header class="l-header">
         <nav class="nav bd-grid">
             <div>
-                <a href="#" class="nav__logo">Himanshu</a>
-            </div>
+<a href="#" class="nav__logo" style="font-size: 1.5rem; font-weight: bold; color: #d81344; text-decoration: none; padding: 8px 16px; border-radius: 8px; transition: background 0.3s ease;">
+    Welcome Explorer 🚀
+</a>            </div>
             <div class="nav__menu-wrapper">
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
@@ -51,10 +52,15 @@
         <!--===== HOME =====-->
         <section class="home bd-grid" id="home">
             <div class="home__data">
-                <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">Himanshu</span><br> DevOps & Analytics Expert
-                    <span class="home__title-color"><br>Please note that this website is a work in progress and the content is not yet finalized<br></span>
-                </h1>
-                <a href="mailto:hjoshi25@asu.edu" class="button">Contact</a>
+           <h1 class="home__title">
+  Hello,<br>
+  I'm <span class="home__title-color">Himanshu</span><br>
+  Passionate about Cloud Analytics.<br>
+  <span class="home__title-color">
+    Please note: This website is currently under development, and some content is subject to change.
+  </span>
+</h1>
+                <a class="nav__item"><a href="#contact" class="button">Contact</a>
             </div>
             <div class="home__social">
                 <a href="https://www.linkedin.com/in/himanshuuj" class="home__social-icon" target="_blank" title="LinkedIn">
@@ -114,104 +120,141 @@
 
         </section>
 
-        <!--===== SKILLS =====-->
+<!--===== SKILLS =====-->
 <section class="skills section" id="skills">
   <h2 class="section-title">Skills</h2>
-<<div style="display: flex; justify-content: center; align-items: center; margin: 32px 0;">
-  <svg width="460" height="460" viewBox="0 0 460 460" xmlns="http://www.w3.org/2000/svg" class="svg-skills">
-    <!-- Define a reusable arrowhead marker -->
-    <defs>
-      <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="0" refY="4" orient="auto">
-        <path d="M0,0 L0,8 L8,4 Z" fill="#6366F1"/>
-      </marker>
-    </defs>
+  <div style="display: flex; justify-content: center; align-items: center; margin: 32px 0;">
+    <svg id="skillsClock" width="460" height="460" viewBox="0 0 460 460" xmlns="http://www.w3.org/2000/svg" class="svg-skills">
+      <defs>
+        <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="0" refY="4" orient="auto">
+          <path d="M0,0 L0,8 L8,4 Z" fill="#6366F1"/>
+        </marker>
+      </defs>
 
-    <!-- Main big circle -->
-    <circle cx="230" cy="230" r="225" fill="#f8fafc" stroke="#6366F1" stroke-width="6"/>
+      <!-- Main clock circle -->
+      <circle cx="230" cy="230" r="225" fill="#f8fafc" stroke="#6366F1" stroke-width="6"/>
 
-    <!-- HOUR hand (to AWS), length 100px -->
-    <line x1="230" y1="230" x2="230" y2="150"
-          stroke="#2E4AEC" stroke-width="6" stroke-linecap="round"
-          marker-end="url(#arrowhead)"/>
+    <!-- Hour hand (shorter) -->
+<g id="hourHand">
+  <line x1="230" y1="230" x2="230" y2="130"
+        stroke="#2E4AEC" stroke-width="6" stroke-linecap="round"
+        marker-end="url(#arrowhead)"/>
+</g>
 
-    <!-- MINUTE hand (to SQL), length 120px -->
-    <line x1="230" y1="230" x2="230" y2="325"
-          stroke="#9B72FA" stroke-width="4" stroke-linecap="round"
-          marker-end="url(#arrowhead)"/>
+<!-- Minute hand (medium) -->
+<g id="minuteHand">
+  <line x1="230" y1="230" x2="230" y2="100"
+        stroke="#9B72FA" stroke-width="4" stroke-linecap="round"
+        marker-end="url(#arrowhead)"/>
+</g>
 
-    <!-- SECOND hand (to BCA at 150°), length 140px -->
-    <line x1="230" y1="230" x2="140" y2="290"
-          stroke="#D16BA5" stroke-width="2" stroke-linecap="round"
-          marker-end="url(#arrowhead)"/>
+<!-- Second hand (longer but still inside center) -->
+<g id="secondHand">
+  <line x1="230" y1="230" x2="230" y2="75"
+        stroke="#D16BA5" stroke-width="2" stroke-linecap="round"
+        marker-end="url(#arrowhead)"/>
+</g>
 
-    <!-- Your 12 skill circles below (unchanged positions/colors) -->
-    <!-- 1. AWS -->
-    <circle cx="230" cy="70" r="30" fill="#6366F1" stroke="#232946" stroke-width="2"/>
-    <text x="230" y="77" text-anchor="middle" font-size="1em" fill="#fff"
-          font-family="'Quicksand', Arial, sans-serif" font-weight="700">AWS</text>
-    <!-- 2. Python -->
-    <circle cx="310.56" cy="90.38" r="30" fill="#7C83FD" stroke="#232946" stroke-width="2"/>
-    <text x="310.56" y="97.38" text-anchor="middle" font-size="1em" fill="#fff"
-          font-family="'Quicksand', Arial, sans-serif" font-weight="700">Python</text>
-    <!-- 3. Docker -->
-    <circle cx="368.43" cy="148.24" r="30" fill="#2E4AEC" stroke="#232946" stroke-width="2"/>
-    <text x="368.43" y="155.24" text-anchor="middle" font-size="1em" fill="#fff"
-          font-family="'Quicksand', Arial, sans-serif" font-weight="700">Docker</text>
-    <!-- 4. Tableau -->
-    <circle cx="390" cy="230" r="30" fill="#1CB5E0" stroke="#232946" stroke-width="2"/>
-    <text x="390" y="237" text-anchor="middle" font-size="1em" fill="#fff"
-          font-family="'Quicksand', Arial, sans-serif" font-weight="700">Tableau</text>
-    <!-- 5. DevOps -->
-    <circle cx="368.43" cy="311.76" r="30" fill="#9B72FA" stroke="#232946" stroke-width="2"/>
-    <text x="368.43" y="318.76" text-anchor="middle" font-size="1em" fill="#fff"
-          font-family="'Quicksand', Arial, sans-serif" font-weight="700">DevOps</text>
-    <!-- 6. k8s -->
-    <circle cx="310.56" cy="369.62" r="30" fill="#574AE2" stroke="#232946" stroke-width="2"/>
-    <text x="310.56" y="376.62" text-anchor="middle" font-size="1em" fill="#fff"
-          font-family="'Quicksand', Arial, sans-serif" font-weight="700">k8s</text>
-    <!-- 7. SQL -->
-    <circle cx="230" cy="390" r="30" fill="#FFA700" stroke="#232946" stroke-width="2"/>
-    <text x="230" y="397" text-anchor="middle" font-size="1em" fill="#232946"
-          font-family="'Quicksand', Arial, sans-serif" font-weight="700">SQL</text>
-    <!-- 8. SSRS -->
-    <circle cx="149.44" cy="369.62" r="30" fill="#36CFC9" stroke="#232946" stroke-width="2"/>
-    <text x="149.44" y="376.62" text-anchor="middle" font-size="1em" fill="#232946"
-          font-family="'Quicksand', Arial, sans-serif" font-weight="700">SSRS</text>
-    <!-- 9. (BCA) -->
-    <circle cx="91.57" cy="311.76" r="30" fill="#52E5E7" stroke="#232946" stroke-width="2"/>
-    <text x="91.57" y="318.76" text-anchor="middle" font-size="0.96em" fill="#232946"
-          font-family="'Quicksand', Arial, sans-serif" font-weight="700">(BCA)</text>
-    <!-- 10. BA -->
-    <circle cx="70" cy="230" r="30" fill="#5058E2" stroke="#232946" stroke-width="2"/>
-    <text x="70" y="237" text-anchor="middle" font-size="1em" fill="#fff"
-          font-family="'Quicksand', Arial, sans-serif" font-weight="700">BA</text>
-    <!-- 11. IaC -->
-    <circle cx="91.57" cy="148.24" r="30" fill="#D16BA5" stroke="#232946" stroke-width="2"/>
-    <text x="91.57" y="155.24" text-anchor="middle" font-size="1em" fill="#fff"
-          font-family="'Quicksand', Arial, sans-serif" font-weight="700">IaC</text>
-    <!-- 12. SSRS -->
-    <circle cx="149.44" cy="90.38" r="30" fill="#4F8FF9" stroke="#232946" stroke-width="2"/>
-    <text x="149.44" y="97.38" text-anchor="middle" font-size="1em" fill="#fff"
-          font-family="'Quicksand', Arial, sans-serif" font-weight="700">MT</text>
-  </svg>
-</div>
-
-
-
-  <script>
-  window.addEventListener('DOMContentLoaded', function() {
-    setTimeout(function(){
-      document.querySelector('.svg-skills').classList.add('animated');
-    }, 500);
-  });
-  </script>
+   <!-- 12 skill circles with text (unchanged positions/colors) -->
+      <!-- 1. AWS -->
+      <circle cx="230" cy="70" r="30" fill="#6366F1" stroke="#232946" stroke-width="2"/>
+      <text x="230" y="77" text-anchor="middle" font-size="1em" fill="#fff"
+            font-family="'Quicksand', Arial, sans-serif" font-weight="700">AWS</text>
+      <!-- 2. Python -->
+      <circle cx="310.56" cy="90.38" r="30" fill="#7C83FD" stroke="#232946" stroke-width="2"/>
+      <text x="310.56" y="97.38" text-anchor="middle" font-size="1em" fill="#fff"
+            font-family="'Quicksand', Arial, sans-serif" font-weight="700">Python</text>
+      <!-- 3. Docker -->
+      <circle cx="368.43" cy="148.24" r="30" fill="#2E4AEC" stroke="#232946" stroke-width="2"/>
+      <text x="368.43" y="155.24" text-anchor="middle" font-size="1em" fill="#fff"
+            font-family="'Quicksand', Arial, sans-serif" font-weight="700">Docker</text>
+      <!-- 4. Tableau -->
+      <circle cx="390" cy="230" r="30" fill="#1CB5E0" stroke="#232946" stroke-width="2"/>
+      <text x="390" y="237" text-anchor="middle" font-size="1em" fill="#fff"
+            font-family="'Quicksand', Arial, sans-serif" font-weight="700">Tableau</text>
+      <!-- 5. DevOps -->
+      <circle cx="368.43" cy="311.76" r="30" fill="#9B72FA" stroke="#232946" stroke-width="2"/>
+      <text x="368.43" y="318.76" text-anchor="middle" font-size="1em" fill="#fff"
+            font-family="'Quicksand', Arial, sans-serif" font-weight="700">DevOps</text>
+      <!-- 6. k8s -->
+      <circle cx="310.56" cy="369.62" r="30" fill="#574AE2" stroke="#232946" stroke-width="2"/>
+      <text x="310.56" y="376.62" text-anchor="middle" font-size="1em" fill="#fff"
+            font-family="'Quicksand', Arial, sans-serif" font-weight="700">k8s</text>
+      <!-- 7. SQL -->
+      <circle cx="230" cy="390" r="30" fill="#FFA700" stroke="#232946" stroke-width="2"/>
+      <text x="230" y="397" text-anchor="middle" font-size="1em" fill="#232946"
+            font-family="'Quicksand', Arial, sans-serif" font-weight="700">SQL</text>
+      <!-- 8. SSRS -->
+      <circle cx="149.44" cy="369.62" r="30" fill="#36CFC9" stroke="#232946" stroke-width="2"/>
+      <text x="149.44" y="376.62" text-anchor="middle" font-size="1em" fill="#232946"
+            font-family="'Quicksand', Arial, sans-serif" font-weight="700">SSRS</text>
+      <!-- 9. (BCA) -->
+      <circle cx="91.57" cy="311.76" r="30" fill="#52E5E7" stroke="#232946" stroke-width="2"/>
+      <text x="91.57" y="318.76" text-anchor="middle" font-size="0.96em" fill="#232946"
+            font-family="'Quicksand', Arial, sans-serif" font-weight="700">(BCA)</text>
+      <!-- 10. BA -->
+      <circle cx="70" cy="230" r="30" fill="#5058E2" stroke="#232946" stroke-width="2"/>
+      <text x="70" y="237" text-anchor="middle" font-size="1em" fill="#fff"
+            font-family="'Quicksand', Arial, sans-serif" font-weight="700">BA</text>
+      <!-- 11. IaC -->
+      <circle cx="91.57" cy="148.24" r="30" fill="#D16BA5" stroke="#232946" stroke-width="2"/>
+      <text x="91.57" y="155.24" text-anchor="middle" font-size="1em" fill="#fff"
+            font-family="'Quicksand', Arial, sans-serif" font-weight="700">IaC</text>
+      <!-- 12. SSRS -->
+      <circle cx="149.44" cy="90.38" r="30" fill="#4F8FF9" stroke="#232946" stroke-width="2"/>
+      <text x="149.44" y="97.38" text-anchor="middle" font-size="1em" fill="#fff"
+            font-family="'Quicksand', Arial, sans-serif" font-weight="700">MT</text>
+    </svg>
+  </div>
 
   <div style="text-align:center; margin-top:22px;">
-      <p style="color:#6366F1;font-weight:600;">
-        AWS, Python, Docker, Tableau, DevOps, k8s, SQL, SSRS, Healthcare Analytics (BCA - Microstrategy), BA, IaC, Meditech (MT)
-      </p>
+    <p style="color:#6366F1;font-weight:600;">
+      AWS, Python, Docker, Tableau, DevOps, k8s, SQL, SSRS, Healthcare Analytics (BCA - Microstrategy), BA, IaC, Meditech (MT)
+    </p>
+  </div>    </svg>
+
+    <!-- Inline JS right below SVG -->
+    <script>
+      const cx = 230, cy = 230;
+      const hourLen = 90, minLen = 110, secLen = 130;
+
+      function setClockHands() {
+        const now = new Date();
+        const hour = now.getHours() % 12;
+        const min = now.getMinutes();
+        const sec = now.getSeconds();
+
+        const hourAngle = ((hour + min / 60) * 30) - 90;
+        const minAngle  = ((min + sec / 60) * 6) - 90;
+        const secAngle  = (sec * 6) - 90;
+
+        function endpoint(len, angle) {
+          const rad = angle * Math.PI / 180;
+          return {
+            x: cx + len * Math.cos(rad),
+            y: cy + len * Math.sin(rad)
+          };
+        }
+
+        const h = endpoint(hourLen, hourAngle);
+        document.querySelector('#hourHand line').setAttribute('x2', h.x);
+        document.querySelector('#hourHand line').setAttribute('y2', h.y);
+
+        const m = endpoint(minLen, minAngle);
+        document.querySelector('#minuteHand line').setAttribute('x2', m.x);
+        document.querySelector('#minuteHand line').setAttribute('y2', m.y);
+
+        const s = endpoint(secLen, secAngle);
+        document.querySelector('#secondHand line').setAttribute('x2', s.x);
+        document.querySelector('#secondHand line').setAttribute('y2', s.y);
+      }
+
+      setClockHands();
+      setInterval(setClockHands, 1000);
+    </script>
   </div>
 </section>
+
 
 
 
