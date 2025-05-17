@@ -1,281 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+
+
 body {
     margin: 0;
-    font-family: 'Nunito', sans-serif;
-    background-color: #f5f0f5;
-    color: #333; /* Set body text to a soft dark color */
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(120deg, #f8fafc 0%, #e0e7ef 100%);
+    color: #232946;
+    letter-spacing: 0.01em;
 }
 
-/* Hero Section */
-.hero {
-    position: relative;
-    height: 60vh;
-    background: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fpngtree.com%2Ffree-backgrounds-photos%2Fsquare-box&psig=AOvVaw1EY57G8jDHSSF8XYnijc1v&ust=1746064408151000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCID81frS_owDFQAAAAAdAAAAABAk') center/cover no-repeat;
+/* ==== Navigation Bar ==== */
+.l-header {
+    background: #fff;
+    box-shadow: 0 2px 14px rgba(99, 102, 241, 0.05);
+}
+
+.nav__menu-wrapper {
+    width: 100%;
+}
+.nav__menu {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    background: transparent;
+    padding: 12px 0;
+}
+.nav__menu::-webkit-scrollbar { display: none; }
+.nav__list {
+    display: flex;
+    gap: 18px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.nav__item { flex-shrink: 0; }
+.nav__link {
+    color: #232946;
+    padding: 8px 18px;
+    border-radius: 22px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    transition: background 0.18s, color 0.18s, transform 0.16s;
+    text-decoration: none;
+}
+.nav__link.active-link,
+.nav__link:focus {
+    background: #6366f1;
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(99, 102, 241, 0.13);
+    transform: scale(1.08);
+}
+.nav__link:hover {
+    background: #14b8a6;
+    color: #fff;
+    transform: scale(1.06);
+}
+.nav__logo {
+    color: #14b8a6;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    margin-right: 16px;
+    letter-spacing: 0.07em;
+}
+
+/* ==== Hero ==== */
+.home {
+    background: linear-gradient(100deg, #f8fafc 0%, #e0e7ef 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    min-height: 70vh;
+    flex-wrap: wrap;
+    gap: 44px;
+}
+.home__title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #232946;
+    margin-bottom: 1rem;
+    line-height: 1.18;
+}
+.home__title-color {
+    color: #6366f1;
+    font-weight: 900;
+}
+.button {
+    background: linear-gradient(90deg, #6366f1, #14b8a6 98%);
     color: #fff;
-    position: relative;
-    z-index: 1;
-}
-
-.hero .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Slightly reduced opacity for better text visibility */
-    z-index: 0;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-}
-
-.hero .avatar {
-    border-radius: 50%;
-    border: 5px solid #fff;
-    width: 120px;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.hero .avatar:hover {
-    transform: scale(1.1);
-}
-
-.hero h1 {
-    margin: 0;
-    font-size: 3.5rem;
     font-weight: 700;
-    line-height: 1.2;
-    color: #f0a500; /* Changed heading color to a warm gold */
-}
-
-.hero p {
-    font-size: 1.2rem;
-    font-weight: 400;
-    color: #f5f5f5; /* Soft white for text */
-}
-
-.hero .social-links a {
-    margin: 0 10px;
-    color: #f5f5f5; /* Light gray color for icons */
+    border: none;
+    padding: 12px 34px;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    margin-top: 1.6rem;
+    cursor: pointer;
+    transition: background 0.19s, color 0.16s, box-shadow 0.18s;
     text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
+    box-shadow: 0 2px 10px rgba(99, 102, 241, 0.09);
+}
+.button:hover {
+    background: #232946;
+    color: #a78bfa;
+    box-shadow: 0 8px 28px rgba(99, 102, 241, 0.17);
+}
+.home__social {
+    display: flex;
+    margin-top: 1.3rem;
+    gap: 18px;
+}
+.home__social-icon {
+    font-size: 2.2rem;
+    color: #6366f1;
+    transition: color 0.18s, transform 0.17s;
+}
+.home__social-icon:hover {
+    color: #14b8a6;
+    transform: scale(1.13);
 }
 
-.hero .social-links a:hover {
-    color: #40864d; /* Change to green on hover */
-}
-
-/* Sections */
-.container {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 0 20px;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-}
-
-.container h2 {
-    margin-top: 0;
-    color: #333; /* Dark gray for better contrast */
-    border-bottom: 2px solid #f0a500; /* Added warm gold color to the border */
-    display: inline-block;
+/* ==== Section Titles ==== */
+.section-title {
+    font-size: 2.2rem;
+    color: #6366f1;
+    letter-spacing: 0.05em;
+    margin-bottom: 36px;
+    font-weight: 800;
+    text-align: center;
     padding-bottom: 5px;
+    border-bottom: 3px solid #14b8a6;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Cards */
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-}
-
-.card {
-    padding: 20px;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-}
-
-.card h3 {
-    margin: 0 0 10px;
-    font-weight: 600;
-    color: #333; /* Dark text color for headings */
-}
-
-.card span {
-    color: #666; /* Lighter color for less important text */
-}
-
-/* Academics Section */
-.Academics.bd-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid for mobile and larger screens */
-    gap: 2rem; /* Increased spacing between sections */
-    margin-bottom: 60px; /* Space at the bottom to separate sections */
-    padding: 0 20px; /* Padding for better spacing */
-}
-
-.work__img {
+/* ==== About Section ==== */
+.about__img-group {
     display: flex;
     flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.about__img-main {
+    width: 140px;
+    border-radius: 24px;
+    box-shadow: 0 3px 18px rgba(140,29,64,0.10);
+    border: 3px solid #FFC627;
+}
+
+.about__img-grad {
+    width: 120px;
+    border-radius: 16px;
+    border: 2.5px solid #8C1D40;
+    box-shadow: 0 3px 18px rgba(140,29,64,0.13);
+    margin-top: 6px;
+}
+
+@media (max-width: 800px) {
+    .about__img-group {
+        flex-direction: row;
+        gap: 12px;
+        margin-bottom: 18px;
+    }
+    .about__img-main,
+    .about__img-grad {
+        width: 90px;
+    }
+}
+
+/* ==== Rainbow Skills SVG Cluster Styling ==== */
+
+.skills.section {
+    margin-top: 60px;
+    margin-bottom: 50px;
+    padding-top: 0;
+    padding-bottom: 0;
+    background: none;
+}
+
+.skills.section .section-title {
+    font-size: 2.1rem;
+    color: #6366F1;
+    letter-spacing: 0.03em;
+    margin-bottom: 18px;
+    font-weight: 800;
+    text-align: center;
+    border-bottom: 3px solid #FFC627;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background: none;
+    box-shadow: none;
+}
+
+.skills.section .skills-svg-caption {
+    text-align: center;
+    margin-top: 16px;
+    color: #6366F1;
+    font-weight: 600;
+    font-size: 1.07rem;
+    font-family: 'Poppins', Arial, sans-serif;
+    letter-spacing: 0.03em;
+}
+
+.skills.section svg {
+    display: block;
+    margin: 0 auto;
+    max-width: 420px;
     height: auto;
-    border: 1px solid #ccc;
-    border-radius: 8px; /* Rounded corners for the cards */
-    padding: 30px; /* Increased padding for better content alignment */
-    background-color: #fff; /* Light background color for contrast */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for cards */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 30px; /* Increased space between cards */
+    background: none;
+    box-shadow: none;
 }
 
-.work__img:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-}
-
-.work__img strong a {
-    text-decoration: none;
-    color: #40864d; /* Make links stand out */
-    font-size: 1.3rem; /* Larger font for links */
-    font-weight: bold; /* Bold links for emphasis */
-    transition: color 0.3s ease;
-}
-
-.work__img strong a:hover {
-    color: #282c34; /* Darker color on hover */
-}
-
-.work__img p {
-    margin-top: 20px; /* Space between the title and description */
-    font-size: 1.2rem; /* Slightly larger font for the body text */
-    line-height: 1.8; /* Increase line height for better readability */
-    color: #555; /* Darker color for text */
-    transition: color 0.3s ease;
-}
-
-.work__img p:hover {
-    color: #40864d; /* Change text color on hover */
-}
-
-/* For mobile screens */
-@media screen and (max-width: 768px) {
-    .Academics.bd-grid {
-        grid-template-columns: 1fr; /* Stack sections vertically on smaller screens */
+/* Responsive SVG container for small screens */
+@media (max-width: 540px) {
+    .skills.section svg {
+        max-width: 100vw;
+        width: 99vw;
     }
-
-    .work__img {
-        padding: 20px; /* Adjust padding for mobile */
+    .skills.section .section-title {
+        font-size: 1.22rem;
+    }
+    .skills.section .skills-svg-caption {
+        font-size: 0.98rem;
     }
 }
 
-/* Section title styles */
-.Academics h2 {
-    font-size: 2.5rem; /* Larger section title */
-    color: #333; /* Darker color for title */
-    text-align: center;
-    margin-bottom: 40px; /* Increased space below title */
-    padding-bottom: 10px;
-    border-bottom: 3px solid #40864d; /* Decorative border below the title */
-}
-
-/* Add extra spacing for mobile screens */
-@media screen and (max-width: 768px) {
-    .Academics h2 {
-        font-size: 2rem; /* Slightly smaller font for smaller screens */
-        margin-bottom: 30px;
-    }
-}
-
-/* Social Media Links */
-.social-links a {
-    margin-right: 10px;
-    color: #333;
-    font-size: 1.5em;
-    transition: transform 0.3s ease;
-}
-
-.social-links a:last-child {
-    margin-right: 0;
-}
-
-.social-links a:hover {
-    transform: scale(1.1);
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #282c34;
-    color: #fff;
-}
-
-footer .footer__icon {
-    font-size: 1.8em;
-    transition: color 0.3s ease;
-}
-
-footer .footer__icon:hover {
-    color: #40864d;
-}
-
-/* Education Grid */
-.edu-grid {
+/* Center and contain the SVG in flex for ALL screen sizes */
+.skills.section > div {
     display: flex;
-    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    margin: 28px 0 10px 0;
     flex-wrap: wrap;
 }
 
-.edu-item {
-    flex: 1;
-    text-align: center;
+
+
+
+/* ==== Work & Academics ==== */
+.work__container, .Academics.bd-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 34px;
+    margin: 36px 0;
+}
+.work__img {
+    background: #fff;
+    border-radius: 16px;
+    padding: 26px 24px;
+    border: 2px solid #f3f4f6;
+    box-shadow: 0 4px 24px rgba(99, 102, 241, 0.09);
+    transition: transform 0.16s, box-shadow 0.17s;
+}
+.work__img:hover {
+    transform: translateY(-5px) scale(1.015);
+    box-shadow: 0 11px 30px rgba(20, 184, 166, 0.13);
+}
+.work__img strong a, .work__img strong {
+    color: #14b8a6;
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.14s;
+}
+.work__img strong a:hover {
+    color: #6366f1;
+    text-decoration: underline;
+}
+.work__img p {
+    color: #5b5f97;
+    font-size: 1.06rem;
+    margin-top: 12px;
+    line-height: 1.68;
+}
+.work__img p:hover {
+    color: #232946;
 }
 
-.edu-item img {
-    border-radius: 8px;
-}
-
-.edu-item h3 {
-    margin: 10px 0 5px;
-}
-
-/* Awards */
-.award-list {
+/* ==== Contact Section ==== */
+.contact__container {
     display: flex;
-    gap: 30px;
     justify-content: center;
+    align-items: center;
+}
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+    padding: 22px;
+    border-radius: 17px;
+    background: #eef2f8;
+    box-shadow: 0 5px 20px rgba(99, 102, 241, 0.08);
+    min-width: 320px;
+}
+.contact__input, .contact__button {
+    font-family: inherit;
+    font-size: 1.08rem;
+    padding: 10px 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    transition: border 0.16s, box-shadow 0.17s;
+    outline: none;
+}
+.contact__input:focus {
+    border: 2px solid #6366f1;
+    box-shadow: 0 3px 13px rgba(99, 102, 241, 0.09);
+}
+.contact__button {
+    background: linear-gradient(90deg, #14b8a6, #6366f1 98%);
+    color: #fff;
+    border: none;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: background 0.18s, color 0.17s;
+}
+.contact__button:hover {
+    background: #232946;
+    color: #a78bfa;
 }
 
-.award-item {
+/* ==== Footer ==== */
+footer {
+    background: #232946;
+    color: #a78bfa;
     text-align: center;
+    padding: 23px 10px 10px 10px;
+    font-size: 1.06rem;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
 }
-
-.award-item img {
-    width: 60px;
+.footer__title {
+    font-size: 1.18rem;
+    font-weight: 700;
     margin-bottom: 10px;
+    color: #14b8a6;
+}
+.footer__icon {
+    color: #6366f1;
+    font-size: 2rem;
+    margin: 0 11px;
+    transition: color 0.14s, transform 0.14s;
+}
+.footer__icon:hover {
+    color: #a78bfa;
+    transform: scale(1.12);
+}
+.footer__copy {
+    margin-top: 7px;
+    font-size: 0.93rem;
+    color: #fff;
 }
 
-/* List Styling */
-section ul {
-    list-style: disc inside;
-    margin: 10px 0;
+/* ==== Responsive ==== */
+@media (max-width: 980px) {
+    .about__container,
+    .skills__container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .about__img img,
+    .skills__img {
+        margin-left: 0;
+    }
+}
+@media (max-width: 650px) {
+    .home__title {
+        font-size: 2rem;
+    }
+    .section-title {
+        font-size: 1.4rem;
+    }
+    .about__img img {
+        max-width: 95px;
+    }
+    .skills__img {
+        max-width: 120px;
+    }
+}
+
+.svg-skills circle, .svg-skills text {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.5s cubic-bezier(.19,1,.22,1), transform 0.5s cubic-bezier(.19,1,.22,1);
+}
+.svg-skills.animated circle,
+.svg-skills.animated text {
+  opacity: 1;
+  transform: scale(1);
 }

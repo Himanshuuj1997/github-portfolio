@@ -1,219 +1,331 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- ===== Google Fonts ===== -->
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- ===== Google Fonts ===== -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="assets/css/styles.css">
 
-        <!-- =====BOX ICONS===== -->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="assets/css/styles.css">
 
-        <title>Himanshu Joshi | DevOps & Analytics Portfolio</title>
+    <!-- =====BOX ICONS===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
-        <!-- Smooth Scroll -->
-        <style>
-            html {
-                scroll-behavior: smooth;
-            }
-        </style>
+    <title>Himanshu Joshi | DevOps & Analytics Portfolio</title>
 
-    </head>
-    <body>
-        <!--===== HEADER =====-->
-        <header class="l-header">
-            <nav class="nav bd-grid">
-                <div>
-                    <a href="#" class="nav__logo">Himanshu</a>
-                </div>
-
+    <!-- Smooth Scroll -->
+    <style>
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body>
+    <!--===== HEADER =====-->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav__logo">Himanshu</a>
+            </div>
+            <div class="nav__menu-wrapper">
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                        <li><a href="#home" class="nav__link">Home</a></li>
                         <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                         <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                         <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
                         <li class="nav__item"><a href="#academics" class="nav__link">Academics</a></li>
                         <li class="nav__item"><a href="#coding" class="nav__link">Projects</a></li>
                         <li class="nav__item"><a href="#life" class="nav__link">Life</a></li>
+                        <li class="nav__item"><a href="#research" class="nav__link">Research</a></li>
                         <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                     </ul>
                 </div>
+            </div>
+        </nav>
+    </header>
 
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
-                </div>
-            </nav>
-        </header>
-
-        <main class="l-main">
-            <!--===== HOME =====-->
-            <section class="home bd-grid" id="home">
-                <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">Himanshu</span><br> DevOps & Analytics Expert
+    <main class="l-main">
+        <!--===== HOME =====-->
+        <section class="home bd-grid" id="home">
+            <div class="home__data">
+                <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">Himanshu</span><br> DevOps & Analytics Expert
                     <span class="home__title-color"><br>Please note that this website is a work in progress and the content is not yet finalized<br></span>
-                    </h1>
+                </h1>
+                <a href="mailto:hjoshi25@asu.edu" class="button">Contact</a>
+            </div>
+            <div class="home__social">
+                <a href="https://www.linkedin.com/in/himanshuuj" class="home__social-icon" target="_blank" title="LinkedIn">
+                    <i class='bx bxl-linkedin'></i>
+                </a>
+                <a href="https://github.com/himanshuuj1997" class="home__social-icon" target="_blank" title="GitHub">
+                    <i class='bx bxl-github'></i>
+                </a>
+                <a href="https://himanshuuj1997.medium.com" class="home__social-icon" target="_blank" title="Medium">
+                    <i class='bx bxl-medium'></i>
+                </a>
+                <a href="https://public.tableau.com/app/profile/himanshuuj1997/vizzes" class="home__social-icon" target="_blank" title="Tableau Visualizations">
+                    <img src="https://cdn.worldvectorlogo.com/logos/tableau-software.svg" alt="Tableau" style="height: 28px; width: 28px; vertical-align: middle; filter: grayscale(0.3); border-radius: 5px;">
+                </a>
+            </div>
+            <div class="home__img">
+                <svg class="home__blob" viewBox="0 0 479 467">
+                    <mask id="mask0" mask-type="alpha">
+                        <path d="M9.19024...Z"/>
+                    </mask>
+                    <g mask="url(#mask0)">
+                        <path d="M9.19024...Z"/>
+                        <image class="home__blob-img" x="50" y="60" href="assets/img/profile.jpg"/>
+                    </g>
+                </svg>
+            </div>
+        </section>
 
-                    <a href="mailto:hjoshi25@asu.edu" class="button">Contact</a>
+        <!--===== ABOUT =====-->
+        <section class="about section" id="about">
+            <h2 class="section-title">About</h2>
+            <div class="about__container bd-grid">
+                <div class="about__img-group">
+                    <img src="assets/img/grad_image.jpeg" alt="Graduation" class="about__img-grad">
                 </div>
-
-                <div class="home__social">
-                    <a href="https://www.linkedin.com/in/himanshuuj" class="home__social-icon" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://github.com/himanshuuj1997" class="home__social-icon" target="_blank"><i class='bx bxl-github'></i></a>
-                    <a href="https://himanshuuj1997.medium.com" class="home__social-icon" target="_blank"><i class='bx bxl-medium'></i></a>
+                <div>
+                    <h2 class="about__subtitle">I'm Himanshu Joshi</h2>
+                    <p class="about__text">
+                        I'm a Business Analyst with 5 years of progressive experience spanning DevOps engineering, cloud operations, and data analytics. 
+                        With a strong foundation in AWS, Kubernetes, Terraform, and automation, I now bridge the gap between technology and business—translating complex technical requirements into actionable insights and scalable solutions.
+                        <br><br>
+                        Currently at Kingman Healthcare, I leverage my expertise in both IT and business analysis to drive digital transformation, process improvement, and data-driven decision-making across the organization. My unique background as a former DevOps and Operations Engineer allows me to understand technical architectures at a deep level while collaborating seamlessly with stakeholders, end users, and technical teams.
+                        <br><br>
+                        I hold a Master's degree in Information Systems Management (Data Analytics & AI) from Arizona State University, along with multiple industry certifications. I'm passionate about empowering teams to innovate, streamline workflows, and deliver measurable business value—whether through process automation, system integration, or insightful analytics.
+                    </p>
                 </div>
+            </div>
+        </section>
 
-                <div class="home__img">
-                    <svg class="home__blob" viewBox="0 0 479 467">
-                        <mask id="mask0" mask-type="alpha">
-                            <path d="M9.19024...Z"/>
-                        </mask>
-                        <g mask="url(#mask0)">
-                            <path d="M9.19024...Z"/>
-                            <image class="home__blob-img" x="50" y="60" href="assets/img/profile.jpg"/>
-                        </g>
-                    </svg>
-                </div>
-            </section>
+        <!--===== SKILLS =====-->
+<section class="skills section" id="skills">
+  <h2 class="section-title">Skills</h2>
+<<div style="display: flex; justify-content: center; align-items: center; margin: 32px 0;">
+  <svg width="460" height="460" viewBox="0 0 460 460" xmlns="http://www.w3.org/2000/svg" class="svg-skills">
+    <!-- Define a reusable arrowhead marker -->
+    <defs>
+      <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="0" refY="4" orient="auto">
+        <path d="M0,0 L0,8 L8,4 Z" fill="#6366F1"/>
+      </marker>
+    </defs>
 
-            <!--===== ABOUT =====-->
-            <section class="about section" id="about">
-                <h2 class="section-title">About</h2>
+    <!-- Main big circle -->
+    <circle cx="230" cy="230" r="225" fill="#f8fafc" stroke="#6366F1" stroke-width="6"/>
 
-                <div class="about__container bd-grid">
-                    <div class="about__img">
-                        <img src="assets/img/about.jpeg" alt="Himanshu Joshi">
-                    </div>
-                    
-                    <div>
-                        <h2 class="about__subtitle">I'm Himanshu Joshi</h2>
-                        <p class="about__text">4+ years of experience in Cloud Operations, DevOps, and Data Analytics. Master’s in Information Systems Management from Arizona State University. Expert in streamlining infrastructure, boosting automation, and solving business problems with data. Certified AWS Architect, Terraform Associate, Kubernetes Admin, and more.</p>
-                    </div>                                    
-                </div>
-            </section>
+    <!-- HOUR hand (to AWS), length 100px -->
+    <line x1="230" y1="230" x2="230" y2="150"
+          stroke="#2E4AEC" stroke-width="6" stroke-linecap="round"
+          marker-end="url(#arrowhead)"/>
 
-            <!--===== SKILLS =====-->
-            <section class="skills section" id="skills">
-                <h2 class="section-title">Skills</h2>
+    <!-- MINUTE hand (to SQL), length 120px -->
+    <line x1="230" y1="230" x2="230" y2="325"
+          stroke="#9B72FA" stroke-width="4" stroke-linecap="round"
+          marker-end="url(#arrowhead)"/>
 
-                <div class="skills__container bd-grid">          
-                    <div>
-                        <h2 class="skills__subtitle">DevOps & Cloud</h2>
-                        <p class="skills__text">AWS (Lambda, ECS, Glue, IAM), Terraform, Jenkins, Docker, Kubernetes, Azure DevOps, GitHub Actions</p>
-                        <h2 class="skills__subtitle">Scripting & Data</h2>
-                        <p class="skills__text">Python, Bash, SQL (PostgreSQL, MySQL), ETL Pipelines, Redshift, Tableau, Machine Learning (ML Ops)</p>
-                        <h2 class="skills__subtitle">Tools & Platforms</h2>
-                        <p class="skills__text">Prometheus, Ansible, Chef, Puppet, BigFix, Jira, ServiceNow, CloudFront, API Gateway, RESTful Services</p>
-                    </div>
-                    
-                    <div>              
-                        <img src="assets/img/work3.jpg" alt="Work Image" class="skills__img">
-                    </div>
-                </div>
-            </section>
+    <!-- SECOND hand (to BCA at 150°), length 140px -->
+    <line x1="230" y1="230" x2="140" y2="290"
+          stroke="#D16BA5" stroke-width="2" stroke-linecap="round"
+          marker-end="url(#arrowhead)"/>
 
-            <!--===== WORK =====-->
-            <section class="work section" id="work">
-                <h2 class="section-title">Experience</h2>
+    <!-- Your 12 skill circles below (unchanged positions/colors) -->
+    <!-- 1. AWS -->
+    <circle cx="230" cy="70" r="30" fill="#6366F1" stroke="#232946" stroke-width="2"/>
+    <text x="230" y="77" text-anchor="middle" font-size="1em" fill="#fff"
+          font-family="'Quicksand', Arial, sans-serif" font-weight="700">AWS</text>
+    <!-- 2. Python -->
+    <circle cx="310.56" cy="90.38" r="30" fill="#7C83FD" stroke="#232946" stroke-width="2"/>
+    <text x="310.56" y="97.38" text-anchor="middle" font-size="1em" fill="#fff"
+          font-family="'Quicksand', Arial, sans-serif" font-weight="700">Python</text>
+    <!-- 3. Docker -->
+    <circle cx="368.43" cy="148.24" r="30" fill="#2E4AEC" stroke="#232946" stroke-width="2"/>
+    <text x="368.43" y="155.24" text-anchor="middle" font-size="1em" fill="#fff"
+          font-family="'Quicksand', Arial, sans-serif" font-weight="700">Docker</text>
+    <!-- 4. Tableau -->
+    <circle cx="390" cy="230" r="30" fill="#1CB5E0" stroke="#232946" stroke-width="2"/>
+    <text x="390" y="237" text-anchor="middle" font-size="1em" fill="#fff"
+          font-family="'Quicksand', Arial, sans-serif" font-weight="700">Tableau</text>
+    <!-- 5. DevOps -->
+    <circle cx="368.43" cy="311.76" r="30" fill="#9B72FA" stroke="#232946" stroke-width="2"/>
+    <text x="368.43" y="318.76" text-anchor="middle" font-size="1em" fill="#fff"
+          font-family="'Quicksand', Arial, sans-serif" font-weight="700">DevOps</text>
+    <!-- 6. k8s -->
+    <circle cx="310.56" cy="369.62" r="30" fill="#574AE2" stroke="#232946" stroke-width="2"/>
+    <text x="310.56" y="376.62" text-anchor="middle" font-size="1em" fill="#fff"
+          font-family="'Quicksand', Arial, sans-serif" font-weight="700">k8s</text>
+    <!-- 7. SQL -->
+    <circle cx="230" cy="390" r="30" fill="#FFA700" stroke="#232946" stroke-width="2"/>
+    <text x="230" y="397" text-anchor="middle" font-size="1em" fill="#232946"
+          font-family="'Quicksand', Arial, sans-serif" font-weight="700">SQL</text>
+    <!-- 8. SSRS -->
+    <circle cx="149.44" cy="369.62" r="30" fill="#36CFC9" stroke="#232946" stroke-width="2"/>
+    <text x="149.44" y="376.62" text-anchor="middle" font-size="1em" fill="#232946"
+          font-family="'Quicksand', Arial, sans-serif" font-weight="700">SSRS</text>
+    <!-- 9. (BCA) -->
+    <circle cx="91.57" cy="311.76" r="30" fill="#52E5E7" stroke="#232946" stroke-width="2"/>
+    <text x="91.57" y="318.76" text-anchor="middle" font-size="0.96em" fill="#232946"
+          font-family="'Quicksand', Arial, sans-serif" font-weight="700">(BCA)</text>
+    <!-- 10. BA -->
+    <circle cx="70" cy="230" r="30" fill="#5058E2" stroke="#232946" stroke-width="2"/>
+    <text x="70" y="237" text-anchor="middle" font-size="1em" fill="#fff"
+          font-family="'Quicksand', Arial, sans-serif" font-weight="700">BA</text>
+    <!-- 11. IaC -->
+    <circle cx="91.57" cy="148.24" r="30" fill="#D16BA5" stroke="#232946" stroke-width="2"/>
+    <text x="91.57" y="155.24" text-anchor="middle" font-size="1em" fill="#fff"
+          font-family="'Quicksand', Arial, sans-serif" font-weight="700">IaC</text>
+    <!-- 12. SSRS -->
+    <circle cx="149.44" cy="90.38" r="30" fill="#4F8FF9" stroke="#232946" stroke-width="2"/>
+    <text x="149.44" y="97.38" text-anchor="middle" font-size="1em" fill="#fff"
+          font-family="'Quicksand', Arial, sans-serif" font-weight="700">SSRS</text>
+  </svg>
+</div>
 
-                <div class="work__container bd-grid">
-                    <div class="work__img">
-                        <p><strong>Kingman Healthcare, Inc</strong><br>Business Application Analyst 3<br>Nov 2024 – Present</p>
-                    </div>
-                    <div class="work__img">
-                        <p><strong>Learning Engineering Institute, ASU</strong><br>Data Science Volunteer<br>Jun 2024 – Nov 2024</p>
-                    </div>
-                    <div class="work__img">
-                        <p><strong>Avizva Solutions</strong><br>DevOps Engineer<br>May 2022 – May 2023</p>
-                    </div>
-                    <div class="work__img">
-                        <p><strong>BlazeClan Technologies</strong><br>Cloud Operation Engineer<br>Jun 2019 – May 2022</p>
-                    </div>
-                </div>
-            </section>
 
-        <section class="Academics section" id="academics">
-  <h2 class="section-title">Academics</h2>
-  <div class="Academics bd-grid">
-    <div class="work__img">
-      <p><strong><a href="https://himanshuuj1997.medium.com/enhancing-data-privacy-a-visionary-approach-using-tableau-on-a-private-linux-server-0a86adc5d0ca" 
-        target="_blank" rel="noopener noreferrer">Secure and Scalable Tableau Deployment on AWS: A Modern Approach to Data Visualization</a></strong><br>
-        This blog introduces a secure approach to data visualization using Tableau by addressing concerns around protecting sensitive data during visualization processes.
-        It highlights the limitations of traditional setups where Tableau is accessed on Windows servers, which can pose security risks. Instead, it proposes deploying Tableau as a web service on a private Linux server within a secure AWS infrastructure.
-        This setup leverages authentication models, controlled access, and activity monitoring while integrating with cloud services like S3 and databases using IAM roles. The blog outlines key components like EC2 instances, load balancers, and firewalls to ensure privacy, scalability, and high availability.
-        Server setup and cost details will be covered in the next post.
+
+  <script>
+  window.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function(){
+      document.querySelector('.svg-skills').classList.add('animated');
+    }, 500);
+  });
+  </script>
+
+  <div style="text-align:center; margin-top:22px;">
+      <p style="color:#6366F1;font-weight:600;">
+        AWS, Python, Docker, Tableau, DevOps, k8s, SQL, SSRS, Healthcare Analytics (BCA - Microstrategy), BA, IaC, Meditech (MT)
       </p>
-      <br>   
-    </div>
-    <div class="work__img">
-      <p><strong><a href="https://himanshuuj1997.medium.com/predicting-emi-defaulters-with-mlops-bestcard-case-study-8113fc52722a" 
-        target="_blank" rel="noopener noreferrer">Predicting EMI Defaulters Using Machine Learning and MLOps: A Real-World Case Study with BestCard</a></strong><br>
-        This blog presents a real-world data science project focused on predicting EMI defaulters for BestCard, a financial services company, as part of a Master’s specialization in data analytics.
-        Leveraging machine learning models—especially XGBoost—and MLOps frameworks, the project successfully identified high-risk customers, resulting in $800k in annual loss reduction and $2 million in increased revenue.
-        The blog outlines the end-to-end process, including data preprocessing, feature engineering, model building, and deployment. It also emphasizes the practical value of using automation and monitoring tools to maintain model performance in a production environment.
-      </p>   <br>
-    </div>
-    <div class="work__img">
-      <p><strong><a href="https://himanshuuj1997.medium.com/introduction-learning-engineering-is-an-emerging-field-that-applies-scientific-principles-and-0eada98cbd82" 
-        target="_blank" rel="noopener noreferrer">Enhancing Writing Instruction Through Learning Engineering: Development and Visualization of the Writing Assessment Tool (WAT)</a></strong><br>
-        The Writing Assessment Tool (WAT) project, grounded in the emerging field of Learning Engineering, leverages data analytics, NLP algorithms, and human-centered design to improve writing instruction and assessment.
-        Designed for students, educators, and researchers, WAT provides automated feedback on various essay types, reduces teacher workload, and enables data-informed instruction. The development process involved iterative design, participatory feedback, and continuous enhancement, addressing key challenges like data ethics and algorithmic fairness.
-        Complementing the tool is an extensive suite of dynamic, user-driven visualizations aimed at analyzing student performance across tasks, drafts, metrics, and time. The visualizations evolved from basic classroom-level overviews to advanced, interactive dashboards, offering educators actionable insights and helping shape the future of personalized education.
-      </p>   <br>
-    </div>
-    <div class="work__img">
-      <p><strong><a href="https://himanshuuj1997.medium.com/the-article-introduces-a-comprehensive-approach-to-leaf-species-detection-and-classification-09264c219b07" 
-        target="_blank" rel="noopener noreferrer">Leaf Species Classification Using Image Processing and Deep Learning</a></strong><br>
-        This article presents a robust and systematic approach to leaf species classification using image processing and machine learning, particularly convolutional neural networks (CNNs).
-        The workflow involves multiple stages, including image acquisition, preprocessing, segmentation, feature extraction, and classification. Enhanced by libraries like OpenCV, PIL, Mahotas, and Matplotlib, the system achieves high classification accuracy (up to 97%) across diverse leaf datasets.
-        Key techniques include contrast enhancement, morphological operations, texture analysis, and dual-stage CNN-based classification. Additionally, the article outlines various advanced image processing algorithms and potential enhancements using transfer learning and deep learning architectures.
-      </p>   <br>
-    </div>
-    <div class="work__img">
-      <p><strong><a href="https://himanshuuj1997.medium.com/building-a-full-scale-devops-architecture-on-aws-with-terraform-and-jenkins-ac9ea67e1646" 
-        target="_blank" rel="noopener noreferrer">End-to-End DevOps Architecture on AWS: A Terraform and Jenkins Approach</a></strong><br>
-        This blog outlines a comprehensive, production-ready DevOps architecture built on AWS, leveraging Terraform for Infrastructure as Code (IaC) and Jenkins for continuous integration and delivery (CI/CD).
-        The system integrates key AWS services including EC2, Lambda, RDS, EKS, and Elastic Beanstalk to ensure scalability, automation, and high availability. Each Terraform file within the repository corresponds to a critical infrastructure component, such as compute resources, API management, database provisioning, and networking.
-        Additionally, a Jenkins pipeline automates code deployment and infrastructure changes, enhancing operational efficiency. The implementation emphasizes secure configurations through IAM roles and Secrets Manager, while visualization and state management files ensure clarity and consistency in deployments.
-      </p>   <br>
-    </div>
   </div>
 </section>
 
 
-          <!--===== CONTACT =====-->
-          <section class="contact section" id="contact">
-                <h2 class="section-title">Contact</h2>
 
-                <div class="contact__container bd-grid">
-                  <form action="contact.php" method="POST" class="contact__form">
+        <!--===== WORK =====-->
+        <section class="work section" id="work">
+            <h2 class="section-title">Experience</h2>
+            <div class="work__container bd-grid">
+                <div class="work__img">
+                    <p><strong>Kingman Healthcare, Inc</strong><br>Business Application Analyst 3<br>Nov 2024 – Present</p>
+                </div>
+                <div class="work__img">
+                    <p><strong>Learning Engineering Institute, ASU</strong><br>Data Science Volunteer<br>Jun 2024 – Nov 2024</p>
+                </div>
+                <div class="work__img">
+                    <p><strong>Avizva Solutions</strong><br>DevOps Engineer<br>May 2022 – May 2023</p>
+                </div>
+                <div class="work__img">
+                    <p><strong>BlazeClan Technologies</strong><br>Cloud Operation Engineer<br>Jun 2019 – May 2022</p>
+                </div>
+            </div>
+        </section>
+
+        <!--===== ACADEMICS =====-->
+        <section class="Academics section" id="academics">
+            <h2 class="section-title">Academics</h2>
+            <div class="Academics bd-grid">
+                <div class="work__img">
+                    <p><strong><a href="https://himanshuuj1997.medium.com/enhancing-data-privacy-a-visionary-approach-using-tableau-on-a-private-linux-server-0a86adc5d0ca" 
+                        target="_blank" rel="noopener noreferrer">Secure and Scalable Tableau Deployment on AWS: A Modern Approach to Data Visualization</a></strong><br>
+                        This blog introduces a secure approach to data visualization using Tableau by addressing concerns around protecting sensitive data during visualization processes.
+                        It highlights the limitations of traditional setups where Tableau is accessed on Windows servers, which can pose security risks. Instead, it proposes deploying Tableau as a web service on a private Linux server within a secure AWS infrastructure.
+                        This setup leverages authentication models, controlled access, and activity monitoring while integrating with cloud services like S3 and databases using IAM roles. The blog outlines key components like EC2 instances, load balancers, and firewalls to ensure privacy, scalability, and high availability.
+                        Server setup and cost details will be covered in the next post.
+                    </p>
+                </div>
+                <div class="work__img">
+                    <p><strong><a href="https://himanshuuj1997.medium.com/predicting-emi-defaulters-with-mlops-bestcard-case-study-8113fc52722a" 
+                        target="_blank" rel="noopener noreferrer">Predicting EMI Defaulters Using Machine Learning and MLOps: A Real-World Case Study with BestCard</a></strong><br>
+                        This blog presents a real-world data science project focused on predicting EMI defaulters for BestCard, a financial services company, as part of a Master’s specialization in data analytics.
+                        Leveraging machine learning models—especially XGBoost—and MLOps frameworks, the project successfully identified high-risk customers, resulting in $800k in annual loss reduction and $2 million in increased revenue.
+                        The blog outlines the end-to-end process, including data preprocessing, feature engineering, model building, and deployment. It also emphasizes the practical value of using automation and monitoring tools to maintain model performance in a production environment.
+                    </p>
+                </div>
+                <div class="work__img">
+                    <p><strong><a href="https://himanshuuj1997.medium.com/introduction-learning-engineering-is-an-emerging-field-that-applies-scientific-principles-and-0eada98cbd82" 
+                        target="_blank" rel="noopener noreferrer">Enhancing Writing Instruction Through Learning Engineering: Development and Visualization of the Writing Assessment Tool (WAT)</a></strong><br>
+                        The Writing Assessment Tool (WAT) project, grounded in the emerging field of Learning Engineering, leverages data analytics, NLP algorithms, and human-centered design to improve writing instruction and assessment.
+                        Designed for students, educators, and researchers, WAT provides automated feedback on various essay types, reduces teacher workload, and enables data-informed instruction. The development process involved iterative design, participatory feedback, and continuous enhancement, addressing key challenges like data ethics and algorithmic fairness.
+                        Complementing the tool is an extensive suite of dynamic, user-driven visualizations aimed at analyzing student performance across tasks, drafts, metrics, and time. The visualizations evolved from basic classroom-level overviews to advanced, interactive dashboards, offering educators actionable insights and helping shape the future of personalized education.
+                    </p>
+                </div>
+                <div class="work__img">
+                    <p><strong><a href="https://himanshuuj1997.medium.com/the-article-introduces-a-comprehensive-approach-to-leaf-species-detection-and-classification-09264c219b07" 
+                        target="_blank" rel="noopener noreferrer">Leaf Species Classification Using Image Processing and Deep Learning</a></strong><br>
+                        This article presents a robust and systematic approach to leaf species classification using image processing and machine learning, particularly convolutional neural networks (CNNs).
+                        The workflow involves multiple stages, including image acquisition, preprocessing, segmentation, feature extraction, and classification. Enhanced by libraries like OpenCV, PIL, Mahotas, and Matplotlib, the system achieves high classification accuracy (up to 97%) across diverse leaf datasets.
+                        Key techniques include contrast enhancement, morphological operations, texture analysis, and dual-stage CNN-based classification. Additionally, the article outlines various advanced image processing algorithms and potential enhancements using transfer learning and deep learning architectures.
+                    </p>
+                </div>
+                <div class="work__img">
+                    <p><strong><a href="https://himanshuuj1997.medium.com/building-a-full-scale-devops-architecture-on-aws-with-terraform-and-jenkins-ac9ea67e1646" 
+                        target="_blank" rel="noopener noreferrer">End-to-End DevOps Architecture on AWS: A Terraform and Jenkins Approach</a></strong><br>
+                        This blog outlines a comprehensive, production-ready DevOps architecture built on AWS, leveraging Terraform for Infrastructure as Code (IaC) and Jenkins for continuous integration and delivery (CI/CD).
+                        The system integrates key AWS services including EC2, Lambda, RDS, EKS, and Elastic Beanstalk to ensure scalability, automation, and high availability. Each Terraform file within the repository corresponds to a critical infrastructure component, such as compute resources, API management, database provisioning, and networking.
+                        Additionally, a Jenkins pipeline automates code deployment and infrastructure changes, enhancing operational efficiency. The implementation emphasizes secure configurations through IAM roles and Secrets Manager, while visualization and state management files ensure clarity and consistency in deployments.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!--=====PROJECTS=====-->
+        <section class="Project section" id="coding">
+            <h2 class="section-title">Projects</h2>
+            <div class="Academics bd-grid">
+                <div class="work__img"></div>
+            </div>
+        </section>
+
+        <!--=====LIFE=====-->
+        <section class="Life section" id="life">
+            <h2 class="section-title">Life</h2>
+            <div class="Academics bd-grid">
+                <div class="work__img"></div>
+            </div>
+        </section>
+
+        <!--=====RESEARCH=====-->
+        <section class="Research section" id="research">
+            <h2 class="section-title">Research</h2>
+            <div class="Academics bd-grid">
+                <div class="work__img"></div>
+            </div>
+        </section>
+
+        <!--===== CONTACT =====-->
+        <section class="contact section" id="contact">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact__container bd-grid">
+                <form action="contact.php" method="POST" class="contact__form">
                     <input type="text" name="name" placeholder="Name" class="contact__input" required>
                     <input type="email" name="email" placeholder="Email" class="contact__input" required>
                     <textarea name="message" placeholder="Message" class="contact__input" required></textarea>
                     <input type="submit" value="Send" class="contact__button button">
                 </form>
-                </div>
-            </section>
-        </main>
-
-        <!--===== FOOTER =====-->
-        <footer class="footer">
-            <p class="footer__title">Himanshu Joshi</p>
-            <div class="footer__social">
-                <a href="https://www.linkedin.com/in/himanshuuj" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/himanshuuj1997" class="footer__icon"><i class='bx bxl-github'></i></a>
-                <a href="https://himanshuuj1997.medium.com" class="footer__icon"><i class='bx bxl-medium'></i></a>
             </div>
-            <p class="footer__copy">© 2025 Himanshu Joshi. All rights reserved.</p>
-        </footer>
+        </section>
+    </main>
 
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
+    <!--===== FOOTER =====-->
+    <footer class="footer">
+        <p class="footer__title">Himanshu Joshi</p>
+        <div class="footer__social">
+            <a href="https://www.linkedin.com/in/himanshuuj" class="footer__icon" target="_blank"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://github.com/himanshuuj1997" class="footer__icon" target="_blank"><i class='bx bxl-github'></i></a>
+            <a href="https://himanshuuj1997.medium.com" class="footer__icon" target="_blank"><i class='bx bxl-medium'></i></a>
+            <a href="https://public.tableau.com/app/profile/himanshuuj1997/vizzes" class="footer__icon" target="_blank" title="Tableau Visualizations">
+                <img src="https://cdn.worldvectorlogo.com/logos/tableau-software.svg" alt="Tableau" style="height: 28px; width: 28px; vertical-align: middle; filter: grayscale(0.3); border-radius: 5px;">
+            </a>
+        </div>
+        <p class="footer__copy">© 2025 Himanshu Joshi. All rights reserved.</p>
+    </footer>
 
-        <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
-    </body>
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!--===== MAIN JS =====-->
+    <script src="assets/js/main.js"></script>
+</body>
 </html>
