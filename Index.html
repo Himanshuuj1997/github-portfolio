@@ -69,13 +69,16 @@
   Passionate about Cloud Analytics.<br>
 </h1>
                 <div style="display: flex; gap: 12px; margin-top: 18px;">
-                  <a href="#" class="button" id="contact-btn" style="background:#E63946; color:#fff;"
-                    onclick="event.preventDefault(); 
-                      const choice = prompt('Connect via:\n1. Gmail\n2. Outlook\n\nType 1 or 2');
-                      if (choice === '1') { window.open('https://mail.google.com/', '_blank'); }
-                      else if (choice === '2') { window.open('https://outlook.office.com/', '_blank'); }">
-                    Contact
-                  </a>
+              <a href="#" class="button" id="contact-btn" style="background:#E63946; color:#fff;"
+                onclick="event.preventDefault(); 
+                  const choice = prompt('Connect via:\n1. Gmail\n2. Outlook\n\nType 1 or 2');
+                  if (choice === '1') { 
+                    window.open('https://mail.google.com/mail/u/0/?view=cm&fs=1&to=himanshujoshi378@gmail.com', '_blank'); 
+                  } else if (choice === '2') { 
+                    window.open('https://outlook.office.com/mail/deeplink/compose?to=himanshujoshi378@gmail.com', '_blank'); 
+                  }">
+                Contact
+              </a>
                     <a href="assets/docx/Resume_HimanshuJoshi.pdf" class="button" style="background:#6366F1; color:#fff;"
                      onclick="event.preventDefault(); if(confirm('Do you want to download the Resume?')) { window.location.href=this.getAttribute('href'); }">
                     Download Resume
