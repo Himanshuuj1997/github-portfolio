@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Website Visitor Counter (OptiStats) -->
+<div style="margin-bottom: 8px;">
+  <span style="font-size:1em; color:#6366F1; font-weight:700;">Visitor Count:</span>
+  <span id="visitor-counter" style="font-size:1em; color:#E63946; font-weight:700; margin-left:8px;">
+    <div id="sfcwlyazqnc8z87pz1fdxpjgfq69nl9tws2"></div>
+    <script type="text/javascript" src="https://counter1.optistats.ovh/private/counter.js?c=wlyazqnc8z87pz1fdxpjgfq69nl9tws2&down=async" async></script>
+    <noscript>
+      <a href="https://www.freecounterstat.com" title="web counter">
+        <img src="https://counter1.optistats.ovh/private/freecounterstat.php?c=wlyazqnc8z87pz1fdxpjgfq69nl9tws2" border="0" title="web counter" alt="web counter">
+      </a>
+    </noscript>
+  </span>
+</div>
+<!-- /Website Visitor Counter -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Social Sharing Meta Tags -->
@@ -157,21 +172,12 @@
       <span style="color:#2404c1;font-weight:600;">Currently pursuing PhD</span> in <span style="color:#068330;font-weight:600;">Information Systems Engineering and Management</span> from <span style="color:#FFC627;font-weight:600;">Harrisburg University of Science and Technology</span>. <span style="color:#8C1D40;">Estimated graduation: August 2030.</span>
       </p>
 
-      <!-- Website Hit Counter -->
+      <!-- Website Hit Counter (static fallback) -->
       <div style="margin-top:24px; text-align:center;">
         <span style="font-size:1.1em; color:#6366F1; font-weight:700;">Website Hits:</span>
-        <span id="hit-counter" style="font-size:1.1em; color:#E63946; font-weight:700; margin-left:8px;">50000</span>
+        <span id="hit-counter" style="font-size:1.1em; color:#E63946; font-weight:700; margin-left:8px;">1,000,000</span>
       </div>
-      <script>
-        // Simple local hit counter (increments on each page load)
-        (function() {
-          var counter = localStorage.getItem('siteHitCounter');
-          if (!counter) counter = 50000;
-          counter = parseInt(counter) + 1;
-          localStorage.setItem('siteHitCounter', counter);
-          document.getElementById('hit-counter').textContent = counter;
-        })();
-      </script>
+      <!-- Hit counter API is currently unavailable; displaying static value. -->
     </div>
     </div>
 <div class="about__img-large">
@@ -1103,5 +1109,6 @@ View Certificate    </button>
     <script src="https://unpkg.com/scrollreveal"></script>
     <!--===== MAIN JS =====-->
     <script src="assets/js/main.js"></script>
+
 </body>
 </html>
