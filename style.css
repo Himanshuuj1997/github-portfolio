@@ -244,6 +244,62 @@ body {
     }
 }
 
+
+/* Skills Section Wrapping */
+.skills__svg-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;       /* Prevent scrolling */
+}
+
+.skills__svg-wrapper svg {
+  max-width: 100%;        /* Scale down on small screens */
+  height: auto;
+}
+
+/* Chart Container */
+.skills-chart {
+  text-align: center;
+  margin: 40px auto;
+  padding: 16px;
+  background: #f9f9fb;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-width: 900px;       /* Prevent stretching too wide */
+  width: 100%;
+}
+
+.chart-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #232946;
+  margin-bottom: 16px;
+}
+
+.skills-chart-img {
+  display: block;
+  width: 100%;
+  max-width: 820px;       /* Keeps image centered */
+  height: auto;
+  margin: 0 auto;
+  border-radius: 8px;
+  border: 2px solid #6366F1;
+  padding: 6px;
+  background: #fff;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .chart-title {
+    font-size: 1.25rem;
+  }
+  .skills-chart {
+    padding: 12px;
+  }
+}
+
 /* Center and contain the SVG in flex for ALL screen sizes */
 .skills.section > div {
     display: flex;
@@ -253,6 +309,46 @@ body {
     flex-wrap: wrap;
 }
 
+/* === Skills Chart Section === */
+.skills-chart {
+    text-align: center;
+    margin: 40px auto;
+    padding: 16px;
+    background: #f9f9fb;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    max-width: 900px;       /* Prevent stretching too wide */
+    width: 100%;
+}
+
+.chart-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #232946;
+    margin-bottom: 16px;
+}
+
+.skills-chart-img {
+    display: block;
+    width: 100%;
+    max-width: 820px;       /* Keeps image centered */
+    height: auto;
+    margin: 0 auto;
+    border-radius: 8px;
+    border: 2px solid #6366F1;
+    padding: 6px;
+    background: #fff;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .chart-title {
+        font-size: 1.25rem;
+    }
+    .skills-chart {
+        padding: 12px;
+    }
+}
 
 
 
@@ -408,3 +504,4 @@ footer {
   opacity: 1;
   transform: scale(1);
 }
+
