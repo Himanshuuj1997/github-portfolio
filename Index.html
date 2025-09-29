@@ -69,11 +69,37 @@
   Passionate about Cloud Analytics.<br>
 </h1>
                 <div style="display: flex; gap: 12px; margin-top: 18px;">
-                  <a href="#contact" class="button">Contact</a>
-                  <a href="assets/docx/Resume_HimanshuJoshi.pdf" class="button" download style="background:#6366F1; color:#fff;">
-                    Download Resume
+                  <a href="mailto:himanshujoshi378@gmail.com" class="button"
+                    onclick="event.preventDefault();
+                      var email = 'himanshujoshi378@gmail.com';
+                      var subject = encodeURIComponent('Contact from Portfolio');
+                      var body = encodeURIComponent('Hi Himanshu,');
+                      var gmailUrl = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + email + '&su=' + subject + '&body=' + body;
+                      var outlookUrl = 'https://outlook.live.com/mail/0/deeplink/compose?to=' + email + '&subject=' + subject + '&body=' + body;
+                      var yahooUrl = 'https://compose.mail.yahoo.com/?to=' + email + '&subject=' + subject + '&body=' + body;
+                      var hotmailUrl = outlookUrl;
+                      var opened = false;
+                      // Try to open Gmail first
+                      if (navigator.userAgent.indexOf('Gmail') !== -1) {
+                        window.open(gmailUrl, '_blank'); opened = true;
+                      } else if (navigator.userAgent.indexOf('Outlook') !== -1 || navigator.userAgent.indexOf('Hotmail') !== -1) {
+                        window.open(outlookUrl, '_blank'); opened = true;
+                      } else if (navigator.userAgent.indexOf('Yahoo') !== -1) {
+                        window.open(yahooUrl, '_blank'); opened = true;
+                      }
+                      // If none detected, fallback to mailto (default client)
+                      if (!opened) {
+                        window.location.href = 'mailto:' + email + '?subject=' + subject + '&body=' + body;
+                      }
+                    ">
+                    Contact
                   </a>
-                  <a href="assets/docx/CoverLetter-HimanshuJoshi.pdf" class="button" download style="background:#FFA700; color:#232946;">
+                    <a href="assets/docx/Resume_HimanshuJoshi.pdf" class="button" style="background:#6366F1; color:#fff;"
+                     onclick="event.preventDefault(); if(confirm('Do you want to download the Resume?')) { window.location.href=this.getAttribute('href'); }">
+                    Download Resume
+                    </a>
+                  <a href="assets/docx/CoverLetter-HimanshuJoshi.pdf" class="button" style="background:#FFA700; color:#232946;"
+                    onclick="event.preventDefault(); if(confirm('Do you want to download the Cover Letter?')) { window.location.href=this.getAttribute('href'); }">
                     Download Cover Letter
                   </a>
                 </div>
