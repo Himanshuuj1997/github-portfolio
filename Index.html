@@ -70,12 +70,21 @@
 </h1>
                 <div style="display: flex; gap: 12px; margin-top: 18px;">
               <a href="#" class="button" id="contact-btn" style="background:#E63946; color:#fff;"
-                onclick="event.preventDefault(); 
+                onclick="event.preventDefault();
                   const choice = prompt('Connect via:\n1. Gmail\n2. Outlook\n\nType 1 or 2');
-                  if (choice === '1') { 
-                    window.open('https://mail.google.com/mail/u/0/?view=cm&fs=1&to=himanshujoshi378@gmail.com', '_blank'); 
-                  } else if (choice === '2') { 
-                    window.open('https://outlook.office.com/mail/deeplink/compose?to=himanshujoshi378@gmail.com', '_blank'); 
+                  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+                  if (choice === '1') {
+                    if (isMobile) {
+                      window.location.href = 'mailto:himanshujoshi378@gmail.com?subject=Contact%20from%20Portfolio';
+                    } else {
+                      window.open('https://mail.google.com/mail/u/0/?view=cm&fs=1&to=himanshujoshi378@gmail.com', '_blank');
+                    }
+                  } else if (choice === '2') {
+                    if (isMobile) {
+                      window.location.href = 'mailto:himanshujoshi378@gmail.com?subject=Contact%20from%20Portfolio';
+                    } else {
+                      window.open('https://outlook.office.com/mail/deeplink/compose?to=himanshujoshi378@gmail.com', '_blank');
+                    }
                   }">
                 Contact
               </a>
