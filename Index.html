@@ -9,47 +9,63 @@
   <span id="viewCounter" class="views-count">—</span>
 </div>
 
-<!-- Visitor Counter -->
+<!-- Visitor Counter – Debug Version -->
 <div style="text-align:center; margin-top:30px;">
   <p style="font-weight:bold; color:#6366F1;">👀 Visitor Count</p>
   <p id="counter" style="font-size:1.3rem; font-weight:600; color:#9B72FA;">Loading…</p>
 </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', function() {
     const counterEl = document.getElementById("counter");
     if (!counterEl) {
-      console.error("Counter element not found");
+      console.error("Counter element #counter not found");
       return;
     }
 
     const namespace = "himanshuuj1997";
     const key = "github-portfolio";
-    const url = `https://api.counterapi.dev/v1/${namespace}/${key}`;
+    const urlUp = `https://api.counterapi.dev/v1/${namespace}/${key}/up`;
+    const urlGet = `https://api.counterapi.dev/v1/${namespace}/${key}`;
 
-    fetch(url)
+    fetch(urlUp)
       .then(response => {
-        if (!response.ok) {
-          throw new Error(`HTTP ${response.status}`);
-        }
+        console.log("UP response status:", response.status);
         return response.json();
       })
       .then(data => {
+        console.log("UP response JSON:", data);
         if (data.value !== undefined) {
           counterEl.textContent = data.value.toLocaleString();
-        } else if (data.count !== undefined) {
-          // sometimes API field is “count” instead of “value”
-          counterEl.textContent = data.count.toLocaleString();
         } else {
-          throw new Error("No value or count in response");
+          throw new Error("No data.value in UP response");
         }
       })
       .catch(err => {
-        console.error("CounterAPI fetch error:", err);
-        counterEl.textContent = "N/A";
+        console.warn("UP fetch error:", err);
+
+        // Try fallback: just GET (do not increment)
+        fetch(urlGet)
+          .then(r2 => {
+            console.log("GET response status:", r2.status);
+            return r2.json();
+          })
+          .then(d2 => {
+            console.log("GET response JSON:", d2);
+            if (d2.value !== undefined) {
+              counterEl.textContent = d2.value.toLocaleString();
+            } else {
+              throw new Error("No value in GET response");
+            }
+          })
+          .catch(err2 => {
+            console.error("GET fallback error:", err2);
+            counterEl.textContent = "N/A";
+          });
       });
   });
 </script>
+
 
 <!-- /Website Visitor Counter -->
 
