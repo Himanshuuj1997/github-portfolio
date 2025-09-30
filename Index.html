@@ -3,18 +3,32 @@
 <head>
 <!-- Website Visitor Counter (OptiStats) - Top Right, Small -->
 
-<div class="visitor-counter-topright">
-  <span>Visitors:</span>
-  <span id="visitor-counter">
-    <div id="sfcwlyazqnc8z87pz1fdxpjgfq69nl9tws2"></div>
-    <script type="text/javascript" src="https://counter1.optistats.ovh/private/counter.js?c=wlyazqnc8z87pz1fdxpjgfq69nl9tws2&down=async" async></script>
-    <noscript>
-      <a href="https://www.freecounterstat.com" title="web counter">
-        <img src="https://counter1.optistats.ovh/private/freecounterstat.php?c=wlyazqnc8z87pz1fdxpjgfq69nl9tws2" border="0" title="web counter" alt="web counter" style="width:28px;height:14px;">
-      </a>
-    </noscript>
-  </span>
+<!-- Page Views -->
+<div class="views-badge" aria-live="polite">
+  <span class="views-label">Views</span>
+  <span id="viewCounter" class="views-count">—</span>
 </div>
+
+<!-- ===== Visitor Counter ===== -->
+<div style="text-align:center; margin-top:30px;">
+  <p style="font-weight:bold; color:#6366F1;">👀 Visitor Count</p>
+  <p id="counter" style="font-size:1.3rem; font-weight:600; color:#9B72FA;"></p>
+</div>
+
+<script>
+  async function loadCounter() {
+    try {
+      const res = await fetch("https://api.counterapi.dev/v1/himanshuuj1997/github-portfolio");
+      const data = await res.json();
+      document.getElementById("counter").textContent = data.count;
+    } catch (err) {
+      console.error("Counter API error:", err);
+      document.getElementById("counter").textContent = "N/A";
+    }
+  }
+  loadCounter();
+</script>
+
 <!-- /Website Visitor Counter -->
 
     <meta charset="UTF-8">
@@ -1110,6 +1124,32 @@ View Certificate    </button>
     <script src="https://unpkg.com/scrollreveal"></script>
     <!--===== MAIN JS =====-->
     <script src="assets/js/main.js"></script>
+
+<script>
+  // CounterAPI V1 – public, no auth. Docs: https://api.counterapi.dev/v1
+  (function () {
+    // Choose a namespace for your site and a counter name for this page
+    const NAMESPACE = 'himanshu-portfolio';
+    // Use a stable counter per page: e.g., 'home', or use path for multiple pages:
+    const NAME = (location.pathname === '/' || location.pathname.endsWith('index.html'))
+                 ? 'home'
+                 : location.pathname.replace(/\W+/g, '-').replace(/^-|-$/g, '') || 'home';
+
+    const target = document.getElementById('viewCounter');
+    // Increment and read the value
+    fetch(`https://api.counterapi.dev/v1/${encodeURIComponent(NAMESPACE)}/${encodeURIComponent(NAME)}/up`)
+      .then(r => r.json())
+      .then(d => {
+        if (target && typeof d.value !== 'undefined') {
+          target.textContent = Number(d.value).toLocaleString();
+        }
+      })
+      .catch(() => {
+        if (target) target.textContent = '—';
+      });
+  })();
+</script>
+
 
 </body>
 </html>
