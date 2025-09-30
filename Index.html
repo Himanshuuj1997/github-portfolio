@@ -9,24 +9,46 @@
   <span id="viewCounter" class="views-count">—</span>
 </div>
 
-<!-- ===== Visitor Counter ===== -->
+<!-- Visitor Counter -->
 <div style="text-align:center; margin-top:30px;">
   <p style="font-weight:bold; color:#6366F1;">👀 Visitor Count</p>
-  <p id="counter" style="font-size:1.3rem; font-weight:600; color:#9B72FA;"></p>
+  <p id="counter" style="font-size:1.3rem; font-weight:600; color:#9B72FA;">Loading…</p>
 </div>
 
 <script>
-  async function loadCounter() {
-    try {
-      const res = await fetch("https://api.counterapi.dev/v1/himanshuuj1997/github-portfolio");
-      const data = await res.json();
-      document.getElementById("counter").textContent = data.count;
-    } catch (err) {
-      console.error("Counter API error:", err);
-      document.getElementById("counter").textContent = "N/A";
+  document.addEventListener('DOMContentLoaded', () => {
+    const counterEl = document.getElementById("counter");
+    if (!counterEl) {
+      console.error("Counter element not found");
+      return;
     }
-  }
-  loadCounter();
+
+    const namespace = "himanshuuj1997";
+    const key = "github-portfolio";
+    const url = `https://api.counterapi.dev/v1/${namespace}/${key}`;
+
+    fetch(url)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        if (data.value !== undefined) {
+          counterEl.textContent = data.value.toLocaleString();
+        } else if (data.count !== undefined) {
+          // sometimes API field is “count” instead of “value”
+          counterEl.textContent = data.count.toLocaleString();
+        } else {
+          throw new Error("No value or count in response");
+        }
+      })
+      .catch(err => {
+        console.error("CounterAPI fetch error:", err);
+        counterEl.textContent = "N/A";
+      });
+  });
 </script>
 
 <!-- /Website Visitor Counter -->
