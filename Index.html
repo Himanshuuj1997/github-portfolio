@@ -16,55 +16,21 @@
 </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const counterEl = document.getElementById("counter");
-    if (!counterEl) {
-      console.error("Counter element #counter not found");
-      return;
+  async function updateVisitorCount() {
+    try {
+      const res = await fetch("https://api.counterapi.dev/v1/himanshuuj1997/github-portfolio/up");
+      const data = await res.json();
+      document.getElementById("visitorCounter").innerText =
+        "Visitor Count: " + data.count;
+    } catch (err) {
+      console.error("Counter API Error:", err);
+      document.getElementById("visitorCounter").innerText =
+        "Visitor Count: Error";
     }
-
-    const namespace = "himanshuuj1997";
-    const key = "github-portfolio";
-    const urlUp = `https://api.counterapi.dev/v1/${namespace}/${key}/up`;
-    const urlGet = `https://api.counterapi.dev/v1/${namespace}/${key}`;
-
-    fetch(urlUp)
-      .then(response => {
-        console.log("UP response status:", response.status);
-        return response.json();
-      })
-      .then(data => {
-        console.log("UP response JSON:", data);
-        if (data.value !== undefined) {
-          counterEl.textContent = data.value.toLocaleString();
-        } else {
-          throw new Error("No data.value in UP response");
-        }
-      })
-      .catch(err => {
-        console.warn("UP fetch error:", err);
-
-        // Try fallback: just GET (do not increment)
-        fetch(urlGet)
-          .then(r2 => {
-            console.log("GET response status:", r2.status);
-            return r2.json();
-          })
-          .then(d2 => {
-            console.log("GET response JSON:", d2);
-            if (d2.value !== undefined) {
-              counterEl.textContent = d2.value.toLocaleString();
-            } else {
-              throw new Error("No value in GET response");
-            }
-          })
-          .catch(err2 => {
-            console.error("GET fallback error:", err2);
-            counterEl.textContent = "N/A";
-          });
-      });
-  });
+  }
+  updateVisitorCount();
 </script>
+
 
 
 <!-- /Website Visitor Counter -->
