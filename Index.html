@@ -188,49 +188,6 @@ updateVisitorCount();
    Download Resume
 </a>
 <!-- Confetti Canvas -->
-<canvas id="confettiCanvas"></canvas>
-
-<script>
-function startConfetti() {
-  const canvas = document.getElementById("confettiCanvas");
-  const ctx = canvas.getContext("2d");
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-
-  const colors = ["#8C1D40", "#FFC627"]; // ASU Maroon & Gold
-  const confetti = Array.from({ length: 80 }).map(() => ({
-    x: Math.random() * canvas.width,
-    y: Math.random() * canvas.height - canvas.height,
-    r: Math.random() * 6 + 4,
-    d: Math.random() * 0.5 + 0.5,
-    color: colors[Math.floor(Math.random() * colors.length)],
-  }));
-
-  function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    confetti.forEach(c => {
-      ctx.beginPath();
-      ctx.arc(c.x, c.y, c.r, 0, 2 * Math.PI, false);
-      ctx.fillStyle = c.color;
-      ctx.fill();
-    });
-    update();
-  }
-
-  function update() {
-    confetti.forEach(c => {
-      c.y += c.d * 4;
-      if (c.y > canvas.height) {
-        c.y = -10;
-        c.x = Math.random() * canvas.width;
-      }
-    });
-  }
-
-  let animation = setInterval(draw, 20);
-  setTimeout(() => clearInterval(animation), 4000); // Stop after 4s
-}
-</script>
 
                   <a href="assets/docx/CoverLetter-HimanshuJoshi.pdf" class="button" style="background:#FFA700; color:#232946;"
                     onclick="event.preventDefault(); if(confirm('Do you want to download the Cover Letter?')) { window.location.href=this.getAttribute('href'); }">
@@ -1272,94 +1229,49 @@ document.getElementById("contact-form").addEventListener("submit", function(even
     <script src="assets/js/main.js"></script>
 
 
+<canvas id="confettiCanvas"></canvas>
+
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-  const modal = document.getElementById("resumeModal");
-  const btn = document.getElementById("resumeBtn");
-  const span = document.querySelector(".close");
-  const downloadButtons = document.querySelectorAll(".resume-download");
-  const toast = document.getElementById("toast");
+function startConfetti() {
+  const canvas = document.getElementById("confettiCanvas");
+  const ctx = canvas.getContext("2d");
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
 
-  // Open modal
-  btn.onclick = () => modal.style.display = "flex";
+  const colors = ["#8C1D40", "#FFC627"]; // ASU Maroon & Gold
+  const confetti = Array.from({ length: 80 }).map(() => ({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height - canvas.height,
+    r: Math.random() * 6 + 4,
+    d: Math.random() * 0.5 + 0.5,
+    color: colors[Math.floor(Math.random() * colors.length)],
+  }));
 
-  // Close modal
-  span.onclick = () => modal.style.display = "none";
-  window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; }
-
-  // Handle download + confetti + toast
-  downloadButtons.forEach(button => {
-    button.addEventListener("click", () => {
-      const file = button.getAttribute("data-file");
-
-      // Direct download
-      const link = document.createElement("a");
-      link.href = file;
-      link.download = file.split('/').pop();
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-
-      modal.style.display = "none";
-
-      // 🎉 Confetti + Toast
-      launchConfetti();
-      showToast();
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    confetti.forEach(c => {
+      ctx.beginPath();
+      ctx.arc(c.x, c.y, c.r, 0, 2 * Math.PI, false);
+      ctx.fillStyle = c.color;
+      ctx.fill();
     });
-  });
-
-  // Confetti function (ASU Maroon & Gold)
-  function launchConfetti() {
-    const duration = 2 * 1000;
-    const end = Date.now() + duration;
-    const colors = ['#8C1D40', '#FFC627'];
-
-    (function frame() {
-      const particleCount = 6;
-      const velocity = 35 + Math.random() * 20;
-
-      for (let i = 0; i < particleCount; i++) {
-        const confetti = document.createElement("div");
-        confetti.style.position = "fixed";
-        confetti.style.width = "10px";
-        confetti.style.height = "10px";
-        confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-        confetti.style.left = Math.random() * window.innerWidth + "px";
-        confetti.style.top = "-10px";
-        confetti.style.opacity = 1;
-        confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
-        document.body.appendChild(confetti);
-
-        let fall = setInterval(() => {
-          const top = parseFloat(confetti.style.top);
-          confetti.style.top = top + velocity * 0.2 + "px";
-          confetti.style.opacity -= 0.02;
-          if (top > window.innerHeight || confetti.style.opacity <= 0) {
-            confetti.remove();
-            clearInterval(fall);
-          }
-        }, 16);
-      }
-
-      if (Date.now() < end) {
-        requestAnimationFrame(frame);
-      }
-    })();
+    update();
   }
 
-  // Toast function
-  function showToast() {
-    toast.style.visibility = "visible";
-    toast.style.opacity = "1";
-    toast.style.bottom = "50px";
-
-    setTimeout(() => {
-      toast.style.opacity = "0";
-      toast.style.bottom = "30px";
-      setTimeout(() => { toast.style.visibility = "hidden"; }, 500);
-    }, 3000);
+  function update() {
+    confetti.forEach(c => {
+      c.y += c.d * 4;
+      if (c.y > canvas.height) {
+        c.y = -10;
+        c.x = Math.random() * canvas.width;
+      }
+    });
   }
-});
+
+  let animation = setInterval(draw, 20);
+  setTimeout(() => clearInterval(animation), 4000); // Stop after 4s
+}
 </script>
+
 </body>
 </html>
