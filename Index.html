@@ -150,23 +150,30 @@ updateVisitorCount();
     }
   });
 </script>
-                    <a href="#" class="button" style="background:#6366F1; color:#fff;"
-   onclick="event.preventDefault();
-     const choice = prompt('Which job position are you looking for?\n\n1. DevOps / SRE / Cloud Engineer\n2. Data Analyst / BA / BI Engineer / Data Governance\n3. Machine Learning / Data Scientist / AI ML Engineer');
-
-     if (choice === '1') {
-       window.location.href='assets/docx/Resume_public---HimanshuJoshi---DevOps.pdf';
-     } else if (choice === '2') {
-       window.location.href='assets/docx/Resume_public---HimanshuJoshi__BA_DG.pdf';
-     } else if (choice === '3') {
-       window.location.href='assets/docx/Resume_public----HimanshuJoshi----DS_AI.pdf';
-     } else if (choice === null) {
-       alert('❌ Cancelled. Resume download aborted.');
-     } else {
-       alert('⚠️ Please type 1, 2, or 3 to select a valid job role.');
-     }">
-   Download Resume
+                    <!-- Resume Download Button -->
+<a href="#" class="button" style="background:#6366F1; color:#fff;" id="resumeBtn">
+  Download Resume
 </a>
+
+<!-- Resume Modal -->
+<div id="resumeModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>Select Job Position</h3>
+    <p>Please choose the type of resume you’d like to download:</p>
+    <div class="resume-options">
+      <button class="resume-download" data-file="assets/docx/Resume_public---HimanshuJoshi---DevOps.pdf">
+        DevOps / SRE / Cloud Engineer
+      </button>
+      <button class="resume-download" data-file="assets/docx/Resume_public---HimanshuJoshi__BA_DG.pdf">
+        Data Analyst / BA / BI Engineer / Data Governance
+      </button>
+      <button class="resume-download" data-file="assets/docx/Resume_public----HimanshuJoshi----DS_AI.pdf">
+        Machine Learning / Data Scientist / AI ML Engineer
+      </button>
+    </div>
+  </div>
+</div>
                   <a href="assets/docx/CoverLetter-HimanshuJoshi.pdf" class="button" style="background:#FFA700; color:#232946;"
                     onclick="event.preventDefault(); if(confirm('Do you want to download the Cover Letter?')) { window.location.href=this.getAttribute('href'); }">
                     Download Cover Letter
@@ -1206,5 +1213,38 @@ document.getElementById("contact-form").addEventListener("submit", function(even
     <!--===== MAIN JS =====-->
     <script src="assets/js/main.js"></script>
 
+
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const modal = document.getElementById("resumeModal");
+  const btn = document.getElementById("resumeBtn");
+  const span = document.querySelector(".close");
+  const downloadButtons = document.querySelectorAll(".resume-download");
+
+  // Open modal
+  btn.onclick = () => modal.style.display = "flex";
+
+  // Close modal
+  span.onclick = () => modal.style.display = "none";
+  window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; }
+
+  // Handle download
+  downloadButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const file = button.getAttribute("data-file");
+
+      // Force direct download
+      const link = document.createElement("a");
+      link.href = file;
+      link.download = file.split('/').pop();
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      modal.style.display = "none";
+    });
+  });
+});
+</script>  
 </body>
 </html>
