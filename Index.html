@@ -1123,13 +1123,44 @@ View Certificate    </button>
   <h2 class="section-title">Contact</h2>
   <div class="contact__container bd-grid">
     <form id="contact-form" class="contact__form">
-      <input type="text" name="name" placeholder="Name" class="contact__input" required>
-      <input type="email" name="email" placeholder="Email" class="contact__input" required>
-      <textarea name="message" placeholder="Message" class="contact__input" required></textarea>
+      <input type="text" id="name" name="name" placeholder="Name" class="contact__input" required>
+      <input type="email" id="email" name="email" placeholder="Email" class="contact__input" required>
+      <textarea id="message" name="message" placeholder="Message" class="contact__input" required></textarea>
       <button type="submit" class="contact__button button">Send</button>
     </form>
   </div>
 </section>
+
+<script>
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  // Subject + Body formatting
+  const subject = encodeURIComponent("Portfolio Contact: " + name);
+  const body = encodeURIComponent(
+    "Name: " + name + "\n" +
+    "Email: " + email + "\n\n" +
+    message
+  );
+
+  // Ask user where to open
+  const choice = prompt("Send email via:\n1. Gmail\n2. Outlook\n\nType 1 or 2");
+
+  if (choice === "1") {
+    // Gmail compose link
+    window.open(`https://mail.google.com/mail/u/0/?view=cm&fs=1&to=himanshujoshi378@gmail.com&su=${subject}&body=${body}`, "_blank");
+  } else if (choice === "2") {
+    // Outlook compose link
+    window.open(`https://outlook.office.com/mail/deeplink/compose?to=himanshujoshi378@gmail.com&subject=${subject}&body=${body}`, "_blank");
+  } else {
+    alert("❌ Cancelled. Your message was not sent.");
+  }
+});
+</script>
 
 <script>
   document.getElementById('contact-form').addEventListener('submit', function(e) {
