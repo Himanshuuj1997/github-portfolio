@@ -105,22 +105,30 @@ updateVisitorCount();
   document.getElementById('contact-btn').addEventListener('click', function(event) {
     event.preventDefault();
 
-    // 🎉 Confetti animation
-    confetti({
-      particleCount: 150,
-      spread: 80,
-      origin: { y: 0.6 }
-    });
-
-    // 📝 Thank you message
+    // Step 1: Show thank you message
     alert("✨ Thanks for visiting my profile! Let's connect via email.");
 
-    // Email options logic
+    // Step 2: Confetti with ASU colors (maroon + gold) after alert is closed
+    confetti({
+      particleCount: 150,
+      spread: 90,
+      origin: { y: 0.6 },
+      colors: ['#8C1D40', '#FFC627'] // ASU Maroon + Gold
+    });
+
+    // Step 3: Email options (loop until valid input)
     const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
     if (isMobile) {
       window.location.href = 'mailto:himanshujoshi378@gmail.com?subject=Contact%20from%20Portfolio';
     } else {
-      const choice = prompt('Connect via:\n1. Gmail\n2. Outlook\n\nType 1 or 2');
+      let choice = null;
+      while (choice !== '1' && choice !== '2') {
+        choice = prompt('Connect via:\n1. Gmail\n2. Outlook\n\nType 1 or 2');
+        if (choice === null) {
+          // User cancelled prompt → keep asking until valid input
+          continue;
+        }
+      }
       if (choice === '1') {
         window.open('https://mail.google.com/mail/u/0/?view=cm&fs=1&to=himanshujoshi378@gmail.com', '_blank');
       } else if (choice === '2') {
