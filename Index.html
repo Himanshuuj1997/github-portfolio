@@ -3,26 +3,54 @@
 <head>
 <!-- Website Visitor Counter (OptiStats) - Top Right, Small -->
 
-<!-- Visitor Counter -->
-<div class="views-badge" aria-live="polite" style="position: fixed; top: 12px; right: 12px; background: #fff; padding: 6px 12px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.15); font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; color: #333;">
-  <span class="views-label">Views:</span>
-  <span id="viewCounter">—</span>
-</div>
+<!-- Contact Button -->
+<a href="#" class="button" id="contact-btn" style="background:#E63946; color:#fff;">
+  Contact
+</a>
 
+<!-- Confetti Script -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 <script>
-async function updateVisitorCount() {
-  try {
-    const response = await fetch("https://api.counterapi.dev/v1/himanshuuj1997/github-portfolio/up");
-    const data = await response.json();
-    const counterEl = document.getElementById("viewCounter");
-    if (counterEl) {
-      counterEl.innerText = data.count || "100000";
+  document.getElementById('contact-btn').addEventListener('click', function(event) {
+    event.preventDefault();
+
+    // Step 1: Show thank you message
+    alert("✨ Thanks for visiting my profile! Let's connect via email.");
+
+    // Step 2: Confetti (ASU Maroon + Gold)
+    confetti({
+      particleCount: 150,
+      spread: 90,
+      origin: { y: 0.6 },
+      colors: ['#8C1D40', '#FFC627'] // ASU colors
+    });
+
+    // Step 3: Email flow
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      window.location.href = 'mailto:himanshujoshi378@gmail.com?subject=Contact%20from%20Portfolio&body=Hi%20Himanshu,%0D%0A%0D%0AI%20just%20visited%20your%20portfolio%20and%20wanted%20to%20connect!';
+    } else {
+      let choice = null;
+      while (choice !== '1' && choice !== '2') {
+        choice = prompt('Connect via:\n1. Gmail\n2. Outlook\n\nType 1 or 2 (Cancel to exit)');
+        if (choice === null) {
+          alert("😔 Sorry to see you go. Feel free to connect anytime!");
+          return; // Exit gracefully
+        }
+      }
+
+      // Pre-filled email message
+      const subject = encodeURIComponent("Contact from Portfolio");
+      const body = encodeURIComponent("Hi Himanshu,\n\nI just visited your portfolio and wanted to connect!");
+
+      if (choice === '1') {
+        window.open(`https://mail.google.com/mail/u/0/?view=cm&fs=1&to=himanshujoshi378@gmail.com&su=${subject}&body=${body}`, '_blank');
+      } else if (choice === '2') {
+        window.open(`https://outlook.office.com/mail/deeplink/compose?to=himanshujoshi378@gmail.com&subject=${subject}&body=${body}`, '_blank');
+      }
     }
-  } catch (err) {
-    console.error("Counter API Error:", err);
-  }
-}
-updateVisitorCount();
+  });
 </script>
 <!-- /Website Visitor Counter -->
 
