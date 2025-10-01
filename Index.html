@@ -150,10 +150,23 @@ updateVisitorCount();
     }
   });
 </script>
-                    <a href="assets/docx/Resume_HimanshuJoshi.pdf" class="button" style="background:#6366F1; color:#fff;"
-                     onclick="event.preventDefault(); if(confirm('Do you want to download the Resume?')) { window.location.href=this.getAttribute('href'); }">
-                    Download Resume
-                    </a>
+                    <a href="#" class="button" style="background:#6366F1; color:#fff;"
+   onclick="event.preventDefault();
+     const choice = prompt('Which job position are you looking for?\n\n1. DevOps / SRE / Cloud Engineer\n2. Data Analyst / BA / BI Engineer / Data Governance\n3. Machine Learning / Data Scientist / AI ML Engineer');
+
+     if (choice === '1') {
+       window.location.href='assets/docx/Resume_public---HimanshuJoshi---DevOps.pdf';
+     } else if (choice === '2') {
+       window.location.href='assets/docx/Resume_public---HimanshuJoshi__BA_DG.pdf';
+     } else if (choice === '3') {
+       window.location.href='assets/docx/Resume_public----HimanshuJoshi----DS_AI.pdf';
+     } else if (choice === null) {
+       alert('❌ Cancelled. Resume download aborted.');
+     } else {
+       alert('⚠️ Please type 1, 2, or 3 to select a valid job role.');
+     }">
+   Download Resume
+</a>
                   <a href="assets/docx/CoverLetter-HimanshuJoshi.pdf" class="button" style="background:#FFA700; color:#232946;"
                     onclick="event.preventDefault(); if(confirm('Do you want to download the Cover Letter?')) { window.location.href=this.getAttribute('href'); }">
                     Download Cover Letter
