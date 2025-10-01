@@ -94,21 +94,41 @@ updateVisitorCount();
   Passionate about Cloud Analytics.<br>
 </h1>
                 <div style="display: flex; gap: 12px; margin-top: 18px;">
-              <a href="#" class="button" id="contact-btn" style="background:#E63946; color:#fff;"
-                onclick="event.preventDefault();
-                  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-                  if (isMobile) {
-                    window.location.href = 'mailto:himanshujoshi378@gmail.com?subject=Contact%20from%20Portfolio';
-                  } else {
-                    const choice = prompt('Connect via:\n1. Gmail\n2. Outlook\n\nType 1 or 2');
-                    if (choice === '1') {
-                      window.open('https://mail.google.com/mail/u/0/?view=cm&fs=1&to=himanshujoshi378@gmail.com', '_blank');
-                    } else if (choice === '2') {
-                      window.open('https://outlook.office.com/mail/deeplink/compose?to=himanshujoshi378@gmail.com', '_blank');
-                    }
-                  }">
-                Contact
-              </a>
+              <!-- Contact Button -->
+<a href="#" class="button" id="contact-btn" style="background:#E63946; color:#fff;">
+  Contact
+</a>
+
+<!-- Confetti Script -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+  document.getElementById('contact-btn').addEventListener('click', function(event) {
+    event.preventDefault();
+
+    // 🎉 Confetti animation
+    confetti({
+      particleCount: 150,
+      spread: 80,
+      origin: { y: 0.6 }
+    });
+
+    // 📝 Thank you message
+    alert("✨ Thanks for visiting my profile! Let's connect via email.");
+
+    // Email options logic
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    if (isMobile) {
+      window.location.href = 'mailto:himanshujoshi378@gmail.com?subject=Contact%20from%20Portfolio';
+    } else {
+      const choice = prompt('Connect via:\n1. Gmail\n2. Outlook\n\nType 1 or 2');
+      if (choice === '1') {
+        window.open('https://mail.google.com/mail/u/0/?view=cm&fs=1&to=himanshujoshi378@gmail.com', '_blank');
+      } else if (choice === '2') {
+        window.open('https://outlook.office.com/mail/deeplink/compose?to=himanshujoshi378@gmail.com', '_blank');
+      }
+    }
+  });
+</script>
                     <a href="assets/docx/Resume_HimanshuJoshi.pdf" class="button" style="background:#6366F1; color:#fff;"
                      onclick="event.preventDefault(); if(confirm('Do you want to download the Resume?')) { window.location.href=this.getAttribute('href'); }">
                     Download Resume
