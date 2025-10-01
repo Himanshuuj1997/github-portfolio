@@ -151,41 +151,8 @@ updateVisitorCount();
   });
 </script>
                     <!-- Resume Download Button -->
-<a href="#" class="button" style="background:#6366F1; color:#fff;" 
-   onclick="event.preventDefault();
-     const choice = prompt('Which job posting are you looking for?\n\n1. DevOps / SRE / Cloud Engineer\n2. Data Analyst / BA / BI Engineer / Data Governance\n3. Machine Learning / Data Scientist / AI ML Engineer\n\nType 1, 2 or 3');
-
-     if (!choice) {
-       alert('❌ Sorry, no resume downloaded.');
-       return;
-     }
-
-     let filePath = '';
-     if (choice === '1') {
-       filePath = 'assets/docx/Resume_public---HimanshuJoshi---DevOps.pdf';
-     } else if (choice === '2') {
-       filePath = 'assets/docx/Resume_public---HimanshuJoshi__BA_DG.pdf';
-     } else if (choice === '3') {
-       filePath = 'assets/docx/Resume_public----HimanshuJoshi----DS_AI.pdf';
-     } else {
-       alert('❌ Invalid choice. Please type 1, 2, or 3.');
-       return;
-     }
-
-     // Play chime
-     const chime = new Audio('https://www.soundjay.com/buttons/sounds/button-09.mp3');
-     chime.play();
-
-     // Trigger confetti
-     startConfetti();
-
-     // Trigger download
-     const link = document.createElement('a');
-     link.href = filePath;
-     link.download = filePath.split('/').pop();
-     link.click();
-   ">
-   Download Resume
+<a href="#" class="button resume-download" style="background:#6366F1; color:#fff;">
+  Download Resume
 </a>
 <!-- Confetti Canvas -->
 
@@ -1229,48 +1196,59 @@ document.getElementById("contact-form").addEventListener("submit", function(even
     <script src="assets/js/main.js"></script>
 
 
-<canvas id="confettiCanvas"></canvas>
-
 <script>
-function startConfetti() {
-  const canvas = document.getElementById("confettiCanvas");
-  const ctx = canvas.getContext("2d");
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+  function handleResumeDownload() {
+    const choice = prompt(
+      "Which job position are you looking for?\n\n" +
+      "1. DevOps / SRE / Cloud Engineer\n" +
+      "2. Data Analyst / BA / BI Engineer / Data Governance\n" +
+      "3. Machine Learning / Data Scientist / AI ML Engineer\n\n" +
+      "Please type 1, 2, or 3:"
+    );
 
-  const colors = ["#8C1D40", "#FFC627"]; // ASU Maroon & Gold
-  const confetti = Array.from({ length: 80 }).map(() => ({
-    x: Math.random() * canvas.width,
-    y: Math.random() * canvas.height - canvas.height,
-    r: Math.random() * 6 + 4,
-    d: Math.random() * 0.5 + 0.5,
-    color: colors[Math.floor(Math.random() * colors.length)],
-  }));
+    if (!choice) {
+      alert("❌ No option selected. Resume download cancelled.");
+      return;
+    }
 
-  function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    confetti.forEach(c => {
-      ctx.beginPath();
-      ctx.arc(c.x, c.y, c.r, 0, 2 * Math.PI, false);
-      ctx.fillStyle = c.color;
-      ctx.fill();
-    });
-    update();
+    let file = "";
+    if (choice === "1") {
+      file = "assets/docx/Resume_public---HimanshuJoshi---DevOps.pdf";
+    } else if (choice === "2") {
+      file = "assets/docx/Resume_public---HimanshuJoshi__BA_DG.pdf";
+    } else if (choice === "3") {
+      file = "assets/docx/Resume_public----HimanshuJoshi----DS_AI.pdf";
+    } else {
+      alert("Invalid option. Please try again.");
+      return;
+    }
+
+    // Fire confetti + sound if defined
+    if (typeof startConfetti === "function") startConfetti();
+    if (typeof playChime === "function") playChime();
+
+    // Thank you message
+    alert("🎉 Thank you for visiting my profile! Your resume will now download.");
+
+    // Trigger direct download
+    const link = document.createElement("a");
+    link.href = file;
+    link.download = file.split("/").pop();
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   }
 
-  function update() {
-    confetti.forEach(c => {
-      c.y += c.d * 4;
-      if (c.y > canvas.height) {
-        c.y = -10;
-        c.x = Math.random() * canvas.width;
-      }
-    });
-  }
-
-  let animation = setInterval(draw, 20);
-  setTimeout(() => clearInterval(animation), 4000); // Stop after 4s
-}
+  // Attach to your button
+  document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.querySelector(".button.resume-download");
+    if (btn) {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        handleResumeDownload();
+      });
+    }
+  });
 </script>
 
 </body>
