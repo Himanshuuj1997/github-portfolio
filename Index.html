@@ -151,49 +151,87 @@ updateVisitorCount();
   });
 </script>
                     <!-- Resume Download Button -->
-<a href="#" class="button" style="background:#6366F1; color:#fff;" id="resumeBtn">
-  Download Resume
+<a href="#" class="button" style="background:#6366F1; color:#fff;" 
+   onclick="event.preventDefault();
+     const choice = prompt('Which job posting are you looking for?\n\n1. DevOps / SRE / Cloud Engineer\n2. Data Analyst / BA / BI Engineer / Data Governance\n3. Machine Learning / Data Scientist / AI ML Engineer\n\nType 1, 2 or 3');
+
+     if (!choice) {
+       alert('❌ Sorry, no resume downloaded.');
+       return;
+     }
+
+     let filePath = '';
+     if (choice === '1') {
+       filePath = 'assets/docx/Resume_public---HimanshuJoshi---DevOps.pdf';
+     } else if (choice === '2') {
+       filePath = 'assets/docx/Resume_public---HimanshuJoshi__BA_DG.pdf';
+     } else if (choice === '3') {
+       filePath = 'assets/docx/Resume_public----HimanshuJoshi----DS_AI.pdf';
+     } else {
+       alert('❌ Invalid choice. Please type 1, 2, or 3.');
+       return;
+     }
+
+     // Play chime
+     const chime = new Audio('https://www.soundjay.com/buttons/sounds/button-09.mp3');
+     chime.play();
+
+     // Trigger confetti
+     startConfetti();
+
+     // Trigger download
+     const link = document.createElement('a');
+     link.href = filePath;
+     link.download = filePath.split('/').pop();
+     link.click();
+   ">
+   Download Resume
 </a>
-<!-- Toast Notification -->
-<div id="toast" style="
-  visibility: hidden;
-  min-width: 250px;
-  margin-left: -125px;
-  background-color: #6366F1;
-  color: #fff;
-  text-align: center;
-  border-radius: 8px;
-  padding: 12px;
-  position: fixed;
-  z-index: 1000;
-  left: 50%;
-  bottom: 30px;
-  font-size: 16px;
-  font-weight: 600;
-  opacity: 0;
-  transition: opacity 0.5s, bottom 0.5s;
-">
-  Thanks for downloading my resume! 🎉
-</div>
-<!-- Resume Modal -->
-<div id="resumeModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h3>Select Job Position</h3>
-    <p>Please choose the type of resume you’d like to download:</p>
-    <div class="resume-options">
-      <button class="resume-download" data-file="assets/docx/Resume_public---HimanshuJoshi---DevOps.pdf">
-        DevOps / SRE / Cloud Engineer
-      </button>
-      <button class="resume-download" data-file="assets/docx/Resume_public---HimanshuJoshi__BA_DG.pdf">
-        Data Analyst / BA / BI Engineer / Data Governance
-      </button>
-      <button class="resume-download" data-file="assets/docx/Resume_public----HimanshuJoshi----DS_AI.pdf">
-        Machine Learning / Data Scientist / AI ML Engineer
-      </button>
-    </div>
-  </div>
-</div>
+<!-- Confetti Canvas -->
+<canvas id="confettiCanvas"></canvas>
+
+<script>
+function startConfetti() {
+  const canvas = document.getElementById("confettiCanvas");
+  const ctx = canvas.getContext("2d");
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  const colors = ["#8C1D40", "#FFC627"]; // ASU Maroon & Gold
+  const confetti = Array.from({ length: 80 }).map(() => ({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height - canvas.height,
+    r: Math.random() * 6 + 4,
+    d: Math.random() * 0.5 + 0.5,
+    color: colors[Math.floor(Math.random() * colors.length)],
+  }));
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    confetti.forEach(c => {
+      ctx.beginPath();
+      ctx.arc(c.x, c.y, c.r, 0, 2 * Math.PI, false);
+      ctx.fillStyle = c.color;
+      ctx.fill();
+    });
+    update();
+  }
+
+  function update() {
+    confetti.forEach(c => {
+      c.y += c.d * 4;
+      if (c.y > canvas.height) {
+        c.y = -10;
+        c.x = Math.random() * canvas.width;
+      }
+    });
+  }
+
+  let animation = setInterval(draw, 20);
+  setTimeout(() => clearInterval(animation), 4000); // Stop after 4s
+}
+</script>
+
                   <a href="assets/docx/CoverLetter-HimanshuJoshi.pdf" class="button" style="background:#FFA700; color:#232946;"
                     onclick="event.preventDefault(); if(confirm('Do you want to download the Cover Letter?')) { window.location.href=this.getAttribute('href'); }">
                     Download Cover Letter
